@@ -84,7 +84,7 @@ const Team = () => {
       name: 'Shalini K V',
       role: 'Embedded Intern',
       bio: 'Embedded systems intern working on microcontroller-based development, sensor interfacing, and low-level firmware for aerospace and defence platforms. Actively involved in learning real-time embedded workflows and hardware-software integration.',
-      image: '/lovable-uploads/shalini-kv.png',
+      image: '/lovable-uploads/sk.jpeg',
       initials: 'SK'
     }
   ];
