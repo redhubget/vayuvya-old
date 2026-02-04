@@ -59,7 +59,7 @@ const Products: React.FC = () => {
       ],
       applications: ["Tactical UAVs", "Long-Range Missiles", "Target Drones", "Experimental Air Vehicles"],
     },
-  ];
+    {
  name: "TRJ-MK3",
       overview:
         "The TRJ-MK3 is an upgraded micro turbojet engine delivering 500N thrust. It incorporates advanced DEEC with AI optimization to enhance performance and fuel efficiency. Designed for long-range missiles, tactical UAVs, and target drones, the engine ensures consistent thrust, durability, and precise control. With a design life exceeding 25 operational hours, the TRJ-M1P combines reliability, high thrust-to-weight ratio, and cutting-edge engine management for demanding aerospace applications.",
