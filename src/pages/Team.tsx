@@ -96,26 +96,35 @@ const Team = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-center mb-16">Leadership Team</h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-center">
-            {teamMembers.map((member, index) => (
-              <Card
-                key={index}
-                className="bg-black/50 border-gray-700 hover:border-blue-400 transition-all duration-300 lg:col-span-1 lg:col-start-2"
-              >
-                <CardContent className="p-8 text-center">
-                  <Avatar className="w-32 h-32 mx-auto mb-6">
-                    <AvatarImage src={member.image} alt={member.name} />
-                    <AvatarFallback className="text-2xl bg-blue-600">
-                      {member.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <h3 className="text-2xl font-bold mb-2 text-white">{member.name}</h3>
-                  <p className="text-blue-400 font-semibold mb-4">{member.role}</p>
-                  <p className="text-gray-300 leading-relaxed">{member.bio}</p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+  {teamMembers.map((member, index) => (
+    <Card
+      key={index}
+      className="bg-black/50 border-gray-700 hover:border-blue-400 transition-all duration-300"
+    >
+      <CardContent className="p-8 text-center">
+        <Avatar className="w-32 h-32 mx-auto mb-6">
+          <AvatarImage src={member.image} alt={member.name} />
+          <AvatarFallback className="text-2xl bg-blue-600">
+            {member.initials}
+          </AvatarFallback>
+        </Avatar>
+
+        <h3 className="text-2xl font-bold mb-2 text-white">
+          {member.name}
+        </h3>
+
+        <p className="text-blue-400 font-semibold mb-4">
+          {member.role}
+        </p>
+
+        <p className="text-gray-300 leading-relaxed">
+          {member.bio}
+        </p>
+      </CardContent>
+    </Card>
+  ))}
+</div>
         </div>
       </section>
 
