@@ -36,7 +36,7 @@ const Products: React.FC = () => {
       image: "/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png",
       specifications: [
         { label: "Thrust", value: "4 kN" },
-        { label: "Dry Weight", value: "<5 kg" },
+        { label: "Dry Weight", value: "20 kg" },
         { label: "Fuel Type", value: "Jet-A1 / Aviation Kerosene" },
         { label: "Design Life", value: "20+ operational hours" },
         { label: "Start Mechanism", value: "Electric start system" },
@@ -50,10 +50,10 @@ const Products: React.FC = () => {
         "The TRJ-M1P is an upgraded micro turbojet engine delivering 5kN thrust. It incorporates advanced DEEC with AI optimization to enhance performance and fuel efficiency. Designed for long-range missiles, tactical UAVs, and target drones, the engine ensures consistent thrust, durability, and precise control. With a design life exceeding 25 operational hours, the TRJ-M1P combines reliability, high thrust-to-weight ratio, and cutting-edge engine management for demanding aerospace applications.",
       image: "/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png",
       specifications: [
-        { label: "Thrust", value: "5 kN" },
-        { label: "Dry Weight", value: "≈5.5 kg" },
+        { label: "Thrust", value: "500 N" },
+        { label: "Dry Weight", value: "4.5 kg" },
         { label: "Fuel Type", value: "Jet-A1 / Aviation Kerosene" },
-        { label: "Design Life", value: "25+ operational hours" },
+        { label: "Design Life", value: "15 operational hours" },
         { label: "Start Mechanism", value: "Electric start system" },
         { label: "Control System", value: "Advanced DEEC with AI Optimization" },
       ],
