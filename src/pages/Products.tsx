@@ -33,7 +33,7 @@ const Products: React.FC = () => {
       name: "TR-MK1",
       overview:
         "The TRJ-M1 is a compact turbojet engine delivering 4kN thrust. It is designed for tactical UAVs, target drones, and experimental air vehicles. The engine features a lightweight construction, electric start system, and Digital Electronic Engine Controller (DEEC) to ensure reliable performance across missions. With a design life exceeding 20 operational hours, it offers high efficiency, minimal maintenance, and adaptability for various aerospace applications.",
-      image: "/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png",
+      image: "/lovable-uploads/jet.jpeg",
       specifications: [
         { label: "Thrust", value: "4 kN" },
         { label: "Dry Weight", value: "20 kg" },
@@ -48,7 +48,7 @@ const Products: React.FC = () => {
       name: "TR-MK2",
       overview:
         "The TRJ-MK2 is an upgraded micro turbojet engine delivering 1.2kN thrust. It incorporates advanced DEEC with AI optimization to enhance performance and fuel efficiency. Designed for long-range missiles, tactical UAVs, and target drones, the engine ensures consistent thrust, durability, and precise control. With a design life exceeding 25 operational hours, the TRJ-M1P combines reliability, high thrust-to-weight ratio, and cutting-edge engine management for demanding aerospace applications.",
-      image: "/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png",
+      image: "/lovable-uploads/1st.png",
       specifications: [
         { label: "Thrust", value: "1.2K N" },
         { label: "Dry Weight", value: "9 kg" },
@@ -63,7 +63,7 @@ const Products: React.FC = () => {
  name: "TRJ-MK3",
       overview:
         "The TRJ-MK3 is an upgraded micro turbojet engine delivering 500N thrust. It incorporates advanced DEEC with AI optimization to enhance performance and fuel efficiency. Designed for long-range missiles, tactical UAVs, and target drones, the engine ensures consistent thrust, durability, and precise control. With a design life exceeding 25 operational hours, the TRJ-M1P combines reliability, high thrust-to-weight ratio, and cutting-edge engine management for demanding aerospace applications.",
-      image: "/lovable-uploads/aab6d5f1-c76a-4509-91ed-0f70fa59cf5e.png",
+      image: "/lovable-uploads/2nd.png",
       specifications: [
         { label: "Thrust", value: "500 N" },
         { label: "Dry Weight", value: "4.5 kg" },
