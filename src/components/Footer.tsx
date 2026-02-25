@@ -37,9 +37,13 @@ const Footer = () => {
               Empowering the future of tactical aerospace platforms.
             </p>
             <div className="text-gray-400 space-y-1">
-              <p>Bangalore, India</p>
-              <p>+91-7019561885</p>
-              <p>info@vayuvya.com</p>
+  <p>Bangalore, India</p>
+  <p>+91-7019561885</p>
+  <p>info@vayuvya.com</p>
+  <p className="text-sm text-gray-500">
+    GSTIN: <span className="text-gray-400 font-medium">29AALCV3236F1Z4</span>
+  </p>
+</div>
             </div>
           </div>
 
