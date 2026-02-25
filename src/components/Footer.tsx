@@ -28,24 +28,25 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
 
           {/* Company Info */}
-          <div className="col-span-1 md:col-span-2">
-            <div className="text-2xl font-bold text-white mb-4">
-              VAYUVYA <span className="text-blue-400 ml-2">DEFENCE</span>
-            </div>
-            <p className="text-gray-400 mb-4 max-w-md">
-              Advancing aerospace, software, and AI technologies for India's defence ecosystem.
-              Empowering the future of tactical aerospace platforms.
-            </p>
-            <div className="text-gray-400 space-y-1">
-  <p>Bangalore, India</p>
-  <p>+91-7019561885</p>
-  <p>info@vayuvya.com</p>
-  <p className="text-sm text-gray-500">
-    GSTIN: <span className="text-gray-400 font-medium">29AALCV3236F1Z4</span>
+<div className="col-span-1 md:col-span-2">
+  <div className="text-2xl font-bold text-white mb-4">
+    VAYUVYA <span className="text-blue-400 ml-2">DEFENCE</span>
+  </div>
+
+  <p className="text-gray-400 mb-4 max-w-md">
+    Advancing aerospace, software, and AI technologies for India's defence ecosystem.
+    Empowering the future of tactical aerospace platforms.
   </p>
+
+  <div className="text-gray-400 space-y-1">
+    <p>Bangalore, India</p>
+    <p>+91-7019561885</p>
+    <p>info@vayuvya.com</p>
+    <p className="text-sm text-gray-500">
+      GSTIN: <span className="text-gray-400 font-medium">29AALCV3236F1Z4</span>
+    </p>
+  </div>
 </div>
-            </div>
-          </div>
 
           {/* Quick Links */}
           <div>
