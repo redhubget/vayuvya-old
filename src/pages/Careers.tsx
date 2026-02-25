@@ -157,7 +157,7 @@ const Careers: React.FC = () => {
             <h3 className="text-xl font-semibold mb-4">How to Apply</h3>
             <p className="text-gray-300 mb-6">
               Send your CV and cover letter to: 
-              <span className="text-blue-400 font-semibold"> careers@vayuvya.com</span>
+              <span className="text-blue-400 font-semibold"> propulsion@vayuvya.com</span>
             </p>
             <Button 
               onClick={handleApplyClick}
