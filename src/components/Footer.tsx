@@ -40,7 +40,6 @@ const Footer = () => {
               <p>Bangalore, India</p>
               <p>+91-7019561885</p>
               <p>info@vayuvya.com</p>
-              <P>GST NO- 29AALCV323GF1Z4</P>
             </div>
           </div>
 
