@@ -8,7 +8,7 @@ const Careers: React.FC = () => {
 
   const handleApplyClick = () => {
     scrollToTop();
-    window.location.href = 'mailto:careers@vayuvya.com';
+    window.location.href = 'mailto:propulsion@vayuvya.com';
   };
 
   const engineeringRoles: string[] = [
