@@ -43,12 +43,14 @@ const Navigation: React.FC = () => {
                 >
                   Jet Engines
                 </Link>
+                {/*
                 <Link
                   to="/male-uav"
                   className="block px-4 py-2 text-sm hover:bg-blue-600"
                 >
                   MALE UAV
                 </Link>
+                */}
               </div>
             )}
           </div>
