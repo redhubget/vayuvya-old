@@ -29,7 +29,7 @@ const Home: React.FC = () => {
           className="absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover"
           style={{
             backgroundImage: `url('${import.meta.env.BASE_URL}/test.jpeg')`,
-            filter: "brightness(0.35)"
+            
           }}
         />
 
