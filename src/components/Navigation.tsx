@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+
+/**
+ * IMPORTANT:
+ * These explicit icon imports avoid a known Vite 5 + lucide-react
+ * tree-shaking hang during production build on Vercel.
+ */
+import Menu from "lucide-react/dist/esm/icons/menu";
+import X from "lucide-react/dist/esm/icons/x";
+import ChevronDown from "lucide-react/dist/esm/icons/chevron-down";
 
 const Navigation: React.FC = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -25,7 +33,7 @@ const Navigation: React.FC = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-white">
 
-          {/* Products */}
+          {/* Products Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setProductsOpen(true)}
@@ -39,14 +47,15 @@ const Navigation: React.FC = () => {
               <div className="absolute top-full left-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
                 <Link
                   to="/products"
-                  className="block px-4 py-2 text-sm hover:bg-blue-600"
+                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
                 >
                   Jet Engines
                 </Link>
+
                 {/*
                 <Link
                   to="/male-uav"
-                  className="block px-4 py-2 text-sm hover:bg-blue-600"
+                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
                 >
                   MALE UAV
                 </Link>
@@ -55,15 +64,15 @@ const Navigation: React.FC = () => {
             )}
           </div>
 
-          <Link to="/about" className="hover:text-blue-400">
+          <Link to="/about" className="hover:text-blue-400 transition">
             About Us
           </Link>
 
-          <Link to="/team" className="hover:text-blue-400">
+          <Link to="/team" className="hover:text-blue-400 transition">
             Team
           </Link>
 
-          <Link to="/contact" className="hover:text-blue-400">
+          <Link to="/contact" className="hover:text-blue-400 transition">
             Contact
           </Link>
         </div>
@@ -72,6 +81,7 @@ const Navigation: React.FC = () => {
         <button
           className="md:hidden text-white"
           onClick={() => setMobileOpen(!mobileOpen)}
+          aria-label="Toggle menu"
         >
           {mobileOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
@@ -88,7 +98,7 @@ const Navigation: React.FC = () => {
             >
               <span>Products</span>
               <ChevronDown
-                className={`w-4 h-4 transition ${
+                className={`w-4 h-4 transition-transform ${
                   productsOpen ? "rotate-180" : ""
                 }`}
               />
@@ -96,10 +106,19 @@ const Navigation: React.FC = () => {
 
             {productsOpen && (
               <div className="pl-4 space-y-2 text-sm text-gray-300">
-                <Link to="/products" onClick={() => setMobileOpen(false)}>
+                <Link
+                  to="/products"
+                  onClick={() => setMobileOpen(false)}
+                  className="block hover:text-white"
+                >
                   Jet Engines
                 </Link>
-                <Link to="/male-uav" onClick={() => setMobileOpen(false)}>
+
+                <Link
+                  to="/male-uav"
+                  onClick={() => setMobileOpen(false)}
+                  className="block hover:text-white"
+                >
                   MALE UAV
                 </Link>
               </div>
