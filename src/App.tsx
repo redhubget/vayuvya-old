@@ -15,7 +15,7 @@ import NewsEvents from "./pages/NewsEvents";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-{/*import MaleUav from "./pages/MaleUav";*/} // ✅ ADDED
+
 
 const queryClient = new QueryClient();
 
@@ -36,7 +36,6 @@ const App: React.FC = () => {
               <Route path="/aerospace" element={<Aerospace />} />
               <Route path="/software" element={<Software />} />
               <Route path="/products" element={<Products />} />
-              {/* <Route path="/male-uav" element={<MaleUav />} /> */}
               <Route path="/news-events" element={<NewsEvents />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
