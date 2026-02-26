@@ -50,19 +50,10 @@ const Navigation: React.FC = () => {
                   className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
                 >
                   Jet Engines
-                </Link>
-
-                {/*
-                <Link
-                  to="/male-uav"
-                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-                >
-                  MALE UAV
-                </Link>
-                */}
+                </Link>   
               </div>
             )}
-          </div>
+  
 
           <Link to="/about" className="hover:text-blue-400 transition">
             About Us
