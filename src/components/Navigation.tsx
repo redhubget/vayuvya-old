@@ -104,14 +104,6 @@ const Navigation: React.FC = () => {
                 >
                   Jet Engines
                 </Link>
-
-                <Link
-                  to="/male-uav"
-                  onClick={() => setMobileOpen(false)}
-                  className="block hover:text-white"
-                >
-                  MALE UAV
-                </Link>
               </div>
             )}
 
