@@ -15,7 +15,7 @@ import NewsEvents from "./pages/NewsEvents";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-import MaleUav from "./pages/MaleUav"; // ✅ ADDED
+{/*import MaleUav from "./pages/MaleUav";*/} // ✅ ADDED
 
 const queryClient = new QueryClient();
 
