@@ -28,7 +28,7 @@ const Home: React.FC = () => {
         <div
           className="absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover"
           style={{
-            backgroundImage: `url('${import.meta.env.BASE_URL}/test.jpeg')`,
+          backgroundImage: "url('/test.jpeg')",
             
           }}
         />
