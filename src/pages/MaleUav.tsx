@@ -1,3 +1,6 @@
+
+{/*
+
 import React from "react";
 import { Button } from "@/components/ui/button";
 
@@ -5,11 +8,11 @@ const MaleUav: React.FC = () => {
   return (
     <div className="bg-black text-white min-h-screen">
 
-      {/* HERO SECTION */}
+      {/* HERO SECTION *
       <section className="relative py-28 px-6">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-14 items-center">
           
-          {/* Text */}
+          {/* Text *
           <div>
             <h1 className="text-2xl md:text-3xl font-bold mb-4">
   M.A.L.E UAV - <span className="text-blue-400">Garuda Mk1</span>
@@ -37,7 +40,7 @@ const MaleUav: React.FC = () => {
             </div>
           </div>
 
-          {/* Image */}
+          {/* Image *
           <div className="text-center">
             <img
               src="/lovable-uploads/Male-uav.jpeg"
@@ -48,7 +51,7 @@ const MaleUav: React.FC = () => {
         </div>
       </section>
 
-      {/* OVERVIEW */}
+      {/* OVERVIEW *
       <section className="py-20 px-6 bg-gray-900">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4">
@@ -66,11 +69,11 @@ const MaleUav: React.FC = () => {
         </div>
       </section>
 
-      {/* SPECIFICATIONS & APPLICATIONS */}
+      {/* SPECIFICATIONS & APPLICATIONS *
       <section className="py-20 px-6 bg-black">
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
 
-          {/* Specifications */}
+          {/* Specifications *
           <div>
             <h3 className="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4">
               Key Specifications
@@ -96,7 +99,7 @@ const MaleUav: React.FC = () => {
             </div>
           </div>
 
-          {/* Applications */}
+          {/* Applications *
           <div>
             <h3 className="text-3xl font-bold mb-6 border-l-4 border-blue-500 pl-4">
               Applications
@@ -123,7 +126,7 @@ const MaleUav: React.FC = () => {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA *
       <section className="py-20 px-6 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-6">
@@ -145,3 +148,4 @@ const MaleUav: React.FC = () => {
 };
 
 export default MaleUav;
+*/}
