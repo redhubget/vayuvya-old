@@ -23,7 +23,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       href: "/products",
       dropdown: [
         { label: "Jet Engines", href: "/products" },
-        { label: "M.A.L.E UAV", href: "/male-uav" },
       ],
     },
     { label: "News & Events", href: "/news-events" },
