@@ -114,15 +114,15 @@ const NewsEvents = () => {
   const getCategoryColor = (category: string) => {
     switch (category) {
       case "Exhibition":
-        return "bg-blue-600";
+        return "bg-gray-600";
       case "Technology":
-        return "bg-emerald-600";
+        return "bg-gray-600";
       case "Partnership":
-        return "bg-purple-600";
+        return "bg-gray-600";
       case "Media":
-        return "bg-orange-600";
+        return "bg-gray-600";
       case "Innovation":
-        return "bg-red-600";
+        return "bg-gray-600";
       default:
         return "bg-gray-600";
     }
