@@ -109,6 +109,93 @@ const NewsEvents = () => {
     category: "Partnership",
     link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-aerospace-engineering-activity-7429514197119442945-RqkL",
   },
+    {
+    id: 10,
+    title: "DPIIT Recognised Defence Startup",
+    date: "2025",
+    location: "Government of India",
+    description:
+      "Recognised by the Department for Promotion of Industry and Internal Trade (DPIIT) as an authorised defence startup, validating our innovation, credibility, and contribution to India’s strategic technology ecosystem.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/certificate1.jpg`,
+    category: "Recognition"
+  },
+
+  {
+    id: 11,
+    title: "Product Launch at Bengaluru Tech Summit 2025",
+    date: "2025",
+    location: "Bengaluru Tech Summit",
+    description:
+      "Officially unveiled our flagship product at the prestigious Bengaluru Tech Summit 2025, showcasing breakthrough innovation to global industry leaders, investors, and technology partners.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/productBts.jpg`,
+    category: "Product Launch"
+  },
+
+  {
+    id: 12,
+    title: "Indigenous Jet Engine Assembly Completed",
+    date: "2025",
+    location: "Vayuvya Defence",
+    description:
+      "Successfully completed the full assembly of our in-house developed jet engine, marking a major milestone toward testing and validation of India’s next-generation propulsion technology.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/jet.jpg`,
+    category: "Engineering"
+  },
+
+  {
+    id: 13,
+    title: "DRDO Collaboration in Progress for M.A.L.E UAV",
+    date: "2025",
+    location: "India",
+    description:
+      "Vayuvya Defence is currently collaborating with DRDO on next-generation Medium Altitude Long Endurance UAV development.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/drdo.jpg`,
+    category: "Collaboration"
+  },
+
+  {
+    id: 14,
+    title: "GTRE Collaboration for Defence Engine Development",
+    date: "2025",
+    location: "India",
+    description:
+      "Working closely with the Gas Turbine Research Establishment (GTRE) to develop and supply advanced propulsion systems for strategic defence applications.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/Gt.jpg`,
+    category: "Collaboration"
+  },
+
+  {
+    id: 15,
+    title: "R&D and Pre-Seed Funding by Gonagoor Technologies",
+    date: "2025",
+    location: "India",
+    description:
+      "Backed by Gonagoor Technologies with dedicated R&D support and pre-seed funding to accelerate next-generation aerospace technology development.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/gonagoor.jpg`,
+    category: "Funding"
+  },
+
+  {
+    id: 16,
+    title: "Elevate 2025 Finalist",
+    date: "2025",
+    location: "Karnataka Startup Ecosystem",
+    description:
+      "Recognized among the top startups in Elevate 2025 for innovation and technological impact in aerospace and defence engineering.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/elevate.jpg`,
+    category: "Recognition"
+  },
+
+  {
+    id: 17,
+    title: "InSpace Validated Satellite Design",
+    date: "2025",
+    location: "IN-SPACe",
+    description:
+      "Our satellite design successfully passed IN-SPACe validation, demonstrating reliability and readiness for advanced space applications.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/inspace.jpg`,
+    category: "Space Technology"
+  },
   ];
 
   const getCategoryColor = (category: string) => {
