@@ -69,7 +69,7 @@ const NewsEvents = () => {
     location: "Vayuvya Defence",
     description:
       "Vayuvya Defence unveiled the next variant in its propulsion roadmap — the 500N Micro Turbojet Engine. Designed for enhanced thrust performance and mission adaptability, the engine delivers 500 N thrust with a high thrust-to-weight ratio and optimized airflow architecture for next-generation UAV platforms.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/1st.jpeg`,
+    image: `${import.meta.env.BASE_URL}lovable-uploads/1st.jpg`,
     category: "Product Launch",
     link: "https://www.linkedin.com/posts/vayuvya-defence_microturbojet-500n-aerospaceinnovation-activity-7433051595552018433-S_GW",
   },
@@ -81,7 +81,7 @@ const NewsEvents = () => {
     location: "Vayuvya Defence Facility",
     description:
       "The Vayuvya Defence team hosted Spacerolls Aerospace for detailed discussions on integrating R&D and design capabilities. The meeting focused on collaborative innovation, technology alignment, and long-term strategic development for future propulsion systems.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/2nd.jpeg`,
+    image: `${import.meta.env.BASE_URL}lovable-uploads/2nd.jpg`,
     category: "Collaboration",
     link: "https://www.linkedin.com/posts/vayuvya-defence_innovation-collaboration-rnd-activity-7432380346618314753-tOgh",
   },
@@ -93,7 +93,7 @@ const NewsEvents = () => {
     location: "Vayuvya Defence",
     description:
       "As part of its long-term roadmap, Vayuvya Defence announced the progress of its indigenous micro jet engine program. The propulsion system has entered active testing, focusing on thrust stability, thermal behaviour, and system reliability.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/3rd.jpeg`,
+    image: `${import.meta.env.BASE_URL}lovable-uploads/3rd.jpg`,
     category: "Engineering",
     link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-indigenoustech-aerospaceengineering-activity-7426930018485932032-Jsf1",
   },
@@ -105,7 +105,7 @@ const NewsEvents = () => {
     location: "Bengaluru",
     description:
       "Vayuvya Defence announced a strategic collaboration with Spacerolls Aerospace to integrate their decade-long research in compressor and turbine blade technology into upcoming propulsion systems.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/2nd.jpeg`,
+    image: `${import.meta.env.BASE_URL}lovable-uploads/2nd.jpg`,
     category: "Partnership",
     link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-aerospace-engineering-activity-7429514197119442945-RqkL",
   },
