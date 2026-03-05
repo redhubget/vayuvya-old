@@ -13,63 +13,69 @@ const NewsEvents = () => {
   const newsItems = [
     {
       id: 1,
-      title: "500N Micro Turbojet Engine Unveiled",
-      date: "March 2026",
-      location: "Vayuvya Defence",
+      title: "Vayuvya Defence Showcases Revolutionary Micro Jet Engine Technology",
+      date: "December 2024",
+      location: "Mysuru Big Tech Show",
       description:
-        "Vayuvya Defence unveiled the next variant in its propulsion roadmap — the 500N Micro Turbojet Engine. Designed for high thrust-to-weight performance and optimized airflow architecture for next-generation UAV platforms.",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/Alpha.jpeg`,
-      category: "Product Launch",
-      link: "https://www.linkedin.com/posts/vayuvya-defence_microturbojet-500n-aerospaceinnovation-activity-7433051595552018433-S_GW",
+        "Our team demonstrated India's first indigenous micro jet engine at the prestigious Mysuru Big Tech Show, attracting significant attention from industry experts and potential partners.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/9e922077-ae7e-4703-aae7-13c51fb9d879.png`,
+      category: "Exhibition",
     },
-
     {
       id: 2,
-      title: "Strategic R&D Collaboration Discussions",
-      date: "March 2026",
-      location: "Vayuvya Defence Facility",
+      title: "Technical Deep Dive: Advanced Propulsion Systems for Defence Applications",
+      date: "December 2024",
+      location: "Mysuru Big Tech Show",
       description:
-        "The Vayuvya Defence team hosted Spacerolls Aerospace to discuss future collaboration in propulsion R&D, focusing on technology alignment and long-term aerospace innovation.",
+        "Engaging discussions with industry professionals about our cutting-edge micro turbine engines and their applications in UAVs and tactical aerospace platforms.",
       image: `${import.meta.env.BASE_URL}lovable-uploads/f3a1f760-246b-49e6-bc89-1be9744dcafb.png`,
-      category: "Collaboration",
-      link: "https://www.linkedin.com/posts/vayuvya-defence_innovation-collaboration-rnd-activity-7432380346618314753-tOgh",
+      category: "Technology",
     },
-
     {
       id: 3,
-      title: "Indigenous Jet Engine Development Progress",
-      date: "February 2026",
-      location: "Vayuvya Defence",
+      title: "Innovation Spotlight: Gonagoor Tech Partnership",
+      date: "December 2024",
+      location: "Tech Exhibition",
       description:
-        "Progress update on the indigenous micro turbojet engine development program. The engine platform focuses on modular architecture enabling scalable thrust classes for multiple aerospace applications.",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/1af7ec95-8e51-4d54-8ad0-e73af0686cc1.png`,
-      category: "Engineering",
-      link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-indigenoustech-aerospaceengineering-activity-7426930018485932032-Jsf1",
-    },
-
-    {
-      id: 4,
-      title: "Strategic Aerospace Partnership Announcement",
-      date: "February 2026",
-      location: "Bengaluru",
-      description:
-        "Vayuvya Defence announced a strategic collaboration with Spacerolls Aerospace to integrate advanced compressor and turbine blade technology into next-generation propulsion platforms.",
+        "Highlighting our collaboration with Gonagoor Tech in developing next-generation AI-powered aerospace solutions.",
       image: `${import.meta.env.BASE_URL}lovable-uploads/5b01e4a1-3015-43f0-8159-082f39414c11.png`,
       category: "Partnership",
-      link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-aerospace-engineering-activity-7429514197119442945-RqkL",
+    },
+    {
+      id: 4,
+      title: "Industry Recognition: Media Coverage of Our Breakthrough Technologies",
+      date: "December 2024",
+      location: "Mysuru Event",
+      description:
+        "Vayuvya Defence receives media coverage for its innovative approach to indigenous defence technology development.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/1af7ec95-8e51-4d54-8ad0-e73af0686cc1.png`,
+      category: "Media",
+    },
+    {
+      id: 5,
+      title: "Vayuvya Defence MicroJet Engine Announcement",
+      date: "December 2025",
+      location: "South Park Commons India",
+      description:
+        "Our MicroJet Engine delivers 4 kN thrust with dual combustion chambers and Jet-A1 fuel. Designed for drones and micro-UAVs.",
+      image: `${import.meta.env.BASE_URL}lovable-uploads/Alpha.jpeg`,
+      category: "Innovation",
+      link: "https://x.com/alpha_defense/status/1999692285362208961",
     },
   ];
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case "Product Launch":
+      case "Exhibition":
         return "bg-blue-600";
-      case "Collaboration":
+      case "Technology":
         return "bg-emerald-600";
-      case "Engineering":
-        return "bg-purple-600";
       case "Partnership":
+        return "bg-purple-600";
+      case "Media":
         return "bg-orange-600";
+      case "Innovation":
+        return "bg-red-600";
       default:
         return "bg-gray-600";
     }
@@ -78,25 +84,22 @@ const NewsEvents = () => {
   return (
     <div className="bg-black text-white font-poppins">
 
-      {/* Hero Section */}
+      {/* Hero */}
       <section className="py-24 border-b border-gray-800">
         <div className="max-w-6xl mx-auto px-4 text-center">
-
-          <h1 className="text-5xl md:text-6xl font-light mb-6">
+          <h1 className="text-5xl font-light mb-6">
             News & <span className="text-blue-400">Events</span>
           </h1>
 
           <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            Latest updates from Vayuvya Defence including technology
-            developments, collaborations, exhibitions, and product milestones.
+            Updates from Vayuvya Defence including technology showcases,
+            exhibitions, partnerships and product milestones.
           </p>
-
         </div>
       </section>
 
       {/* News List */}
       <section className="py-16">
-
         <div className="max-w-6xl mx-auto px-4 space-y-8">
 
           {newsItems.map((item) => (
@@ -133,7 +136,6 @@ const NewsEvents = () => {
 
                 {/* Meta */}
                 <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-3">
-
                   <span className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
                     {item.date}
@@ -143,7 +145,6 @@ const NewsEvents = () => {
                     <MapPin className="w-4 h-4" />
                     {item.location}
                   </span>
-
                 </div>
 
                 {/* Description */}
@@ -151,7 +152,7 @@ const NewsEvents = () => {
                   {item.description}
                 </p>
 
-                {/* Read More */}
+                {/* Link */}
                 {item.link && (
                   <a
                     href={item.link}
@@ -163,16 +164,12 @@ const NewsEvents = () => {
                     <ExternalLink className="w-4 h-4" />
                   </a>
                 )}
-
               </div>
-
             </div>
           ))}
 
         </div>
-
       </section>
-
     </div>
   );
 };
