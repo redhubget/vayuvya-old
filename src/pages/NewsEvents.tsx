@@ -62,6 +62,53 @@ const NewsEvents = () => {
       category: "Innovation",
       link: "https://x.com/alpha_defense/status/1999692285362208961",
     },
+  {
+    id: 6,
+    title: "500N Micro Turbojet Engine Unveiled",
+    date: "March 2026",
+    location: "Vayuvya Defence",
+    description:
+      "Vayuvya Defence unveiled the next variant in its propulsion roadmap — the 500N Micro Turbojet Engine. Designed for enhanced thrust performance and mission adaptability, the engine delivers 500 N thrust with a high thrust-to-weight ratio and optimized airflow architecture for next-generation UAV platforms.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/Alpha.jpeg`,
+    category: "Product Launch",
+    link: "https://www.linkedin.com/posts/vayuvya-defence_microturbojet-500n-aerospaceinnovation-activity-7433051595552018433-S_GW",
+  },
+
+  {
+    id: 7,
+    title: "Strategic R&D Collaboration Discussions",
+    date: "March 2026",
+    location: "Vayuvya Defence Facility",
+    description:
+      "The Vayuvya Defence team hosted Spacerolls Aerospace for detailed discussions on integrating R&D and design capabilities. The meeting focused on collaborative innovation, technology alignment, and long-term strategic development for future propulsion systems.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/f3a1f760-246b-49e6-bc89-1be9744dcafb.png`,
+    category: "Collaboration",
+    link: "https://www.linkedin.com/posts/vayuvya-defence_innovation-collaboration-rnd-activity-7432380346618314753-tOgh",
+  },
+
+  {
+    id: 8,
+    title: "Indigenous Jet Engine Development Progress",
+    date: "February 2026",
+    location: "Vayuvya Defence",
+    description:
+      "As part of its long-term roadmap, Vayuvya Defence announced the progress of its indigenous micro jet engine program. The propulsion system has entered active testing, focusing on thrust stability, thermal behaviour, and system reliability.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/1af7ec95-8e51-4d54-8ad0-e73af0686cc1.png`,
+    category: "Engineering",
+    link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-indigenoustech-aerospaceengineering-activity-7426930018485932032-Jsf1",
+  },
+
+  {
+    id: 9,
+    title: "Strategic Aerospace Partnership Announcement",
+    date: "February 2026",
+    location: "Bengaluru",
+    description:
+      "Vayuvya Defence announced a strategic collaboration with Spacerolls Aerospace to integrate their decade-long research in compressor and turbine blade technology into upcoming propulsion systems.",
+    image: `${import.meta.env.BASE_URL}lovable-uploads/5b01e4a1-3015-43f0-8159-082f39414c11.png`,
+    category: "Partnership",
+    link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-aerospace-engineering-activity-7429514197119442945-RqkL",
+  },
   ];
 
   const getCategoryColor = (category: string) => {
