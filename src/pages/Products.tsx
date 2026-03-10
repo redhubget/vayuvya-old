@@ -27,7 +27,7 @@ const products = [
     thrust: "500N",
     description:
       "Ultra-compact micro turbojet for small UAV platforms, target drones, and experimental aerospace research.",
-    image: "/lovable-uploads/500.jpeg",
+    image: "/lovable-uploads/500.png",
     path: "/products/500n",
   },
 ];
