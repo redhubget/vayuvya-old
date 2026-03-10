@@ -41,13 +41,6 @@ const Navigation: React.FC = () => {
             {productsOpen && (
               <div className="absolute left-0 top-full pt-2 w-56 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
 
-                <Link
-                  to="/products"
-                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-                >
-                  All Jet Engines
-                </Link>
-
                 <div className="border-t border-gray-700"></div>
 
                 <Link
@@ -58,7 +51,7 @@ const Navigation: React.FC = () => {
                 </Link>
 
                 <Link
-                  to="/products/1-2kn"
+                  to="/products/1.2kn"
                   className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
                 >
                   1.2kN Turbojet Engine
@@ -119,13 +112,6 @@ const Navigation: React.FC = () => {
             {productsOpen && (
               <div className="pl-4 space-y-2 text-sm text-gray-300">
 
-                <Link
-                  to="/products"
-                  onClick={() => setMobileOpen(false)}
-                  className="block hover:text-white"
-                >
-                  All Jet Engines
-                </Link>
 
                 <Link
                   to="/products/4kn"
@@ -136,7 +122,7 @@ const Navigation: React.FC = () => {
                 </Link>
 
                 <Link
-                  to="/products/1-2kn"
+                  to="/products/1.2kn"
                   onClick={() => setMobileOpen(false)}
                   className="block hover:text-white"
                 >
