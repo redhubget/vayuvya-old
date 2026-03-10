@@ -33,25 +33,55 @@ const Navigation: React.FC = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-white">
 
-          {/* Products Dropdown */}
-          <div
-            className="relative"
-            onMouseEnter={() => setProductsOpen(true)}
-            onMouseLeave={() => setProductsOpen(false)}
-          >
-            <button className="flex items-center gap-1 hover:text-blue-400 transition">
-              Products <ChevronDown className="w-4 h-4" />
-            </button>
+         {/* Products Dropdown */}
+<div
+  className="relative"
+  onMouseEnter={() => setProductsOpen(true)}
+  onMouseLeave={() => setProductsOpen(false)}
+>
+  <button className="flex items-center gap-1 hover:text-blue-400 transition">
+    Products <ChevronDown className="w-4 h-4" />
+  </button>
 
-            {productsOpen && (
-              <div className="absolute top-full left-0 mt-2 w-48 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
-                <Link
-                  to="/products"
-                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-                >
-                  Jet Engines
-                </Link>   
-              </div>
+  {productsOpen && (
+    <div className="absolute top-full left-0 mt-2 w-56 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
+
+      {/* Main Products Page */}
+      <Link
+        to="/products"
+        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+      >
+        All Jet Engines
+      </Link>
+
+      {/* Divider */}
+      <div className="border-t border-gray-700"></div>
+
+      {/* Individual Products */}
+      <Link
+        to="/products/4kN"
+        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+      >
+        4kN Turbojet Engine
+      </Link>
+
+      <Link
+        to="/products/12kN"
+        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+      >
+        1.2kN Turbojet Engine
+      </Link>
+
+      <Link
+        to="/products/500N"
+        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+      >
+        500N Micro Turbojet
+      </Link>
+
+    </div>
+  )}
+</div>
             )}
   
 
