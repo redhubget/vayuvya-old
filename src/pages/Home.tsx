@@ -118,4 +118,59 @@ const Home: React.FC = () => {
   );
 };
 
+{/* PARTNERS SECTION */}
+<section className="relative py-20 bg-black border-t border-gray-800 overflow-hidden">
+
+  <h2 className="text-4xl font-light text-center text-white mb-12">
+    Our Partners & Ecosystem
+  </h2>
+
+  <div className="relative w-full overflow-hidden">
+
+    <div className="flex gap-16 items-center animate-partner-scroll whitespace-nowrap">
+
+      {[
+        "/lovable-uploads/KDEM.png",
+        "/lovable-uploads/STARTUP KARNATAKA.png",
+        "/lovable-uploads/DSE.jpg",
+        "SPACE ROLES",
+        "/lovable-uploads/JAIN.png",
+        "/lovable-uploads/MSME.jpg",
+        "/lovable-uploads/INSPACE.png",
+        "/lovable-uploads/MIA.jpg",
+        "/lovable-uploads/STARTUP INDIA.png",
+      ].map((partner, i) => (
+        <div
+          key={i}
+          className="text-gray-300 text-lg font-semibold tracking-wide opacity-70 hover:opacity-100 transition"
+        >
+          {partner}
+        </div>
+      ))}
+
+      {/* Duplicate logos for seamless scroll */}
+      {[
+        "/lovable-uploads/KDEM.png",
+        "/lovable-uploads/STARTUP KARNATAKA.png",
+        "/lovable-uploads/DSE.jpg",
+        "SPACE ROLES",
+        "/lovable-uploads/JAIN.png",
+        "/lovable-uploads/MSME.jpg",
+        "/lovable-uploads/INSPACE.png",
+        "/lovable-uploads/MIA.jpg",
+        "/lovable-uploads/STARTUP INDIA.png"
+      ].map((partner, i) => (
+        <div
+          key={`dup-${i}`}
+          className="text-gray-300 text-lg font-semibold tracking-wide opacity-70 hover:opacity-100 transition"
+        >
+          {partner}
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+
+</section>
 export default Home;
