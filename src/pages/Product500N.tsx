@@ -2,7 +2,7 @@
  * Product500N — dedicated page for the 500N Micro Turbojet Engine.
  */
 import ProductDetail from "@/components/ProductDetail";
-import engine500n from "@/assets/engine-500n.png";
+import engine500n from "@/lovable-uploads/3rd.jpg";
 
 const Product500N = () => (
   <ProductDetail
