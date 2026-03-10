@@ -20,7 +20,7 @@ const products = [
     description:
       "Compact, reliable turbojet optimized for tactical drones and loitering munition platforms with extended endurance.",
     image: "/lovable-uploads/2nd.png",
-    path: "/products/1-2kn",
+    path: "/products/12kn",
   },
   {
     title: "500N Micro Turbojet Engine",
