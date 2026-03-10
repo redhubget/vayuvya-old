@@ -2,7 +2,7 @@
  * Product4kN — dedicated page for the 4kN Turbojet Engine.
  */
 import ProductDetail from "@/components/ProductDetail";
-import engine4kn from "@/lovable-uploads/1st.jpg";
+import engine4kn from "/lovable-uploads/1st.jpg";
 
 const Product4kN = () => (
   <ProductDetail
