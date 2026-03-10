@@ -1,74 +1,57 @@
 /**
  * Products — listing page for all propulsion systems.
  */
-import { motion } from "framer-motion";
-import ProductCard from "@/components/ProductCard";
-import engine4kn from "/lovable-uploads/1st.png";
-import engine12kn from "/lovable-uploads/2nd.png";
-import engine500n from "/lovable-uploads/500.jpeg";;
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
+import SectionReveal from "./SectionReveal";
 
-const products = [
-  {
-    title: "4kN Turbojet Engine",
-    thrust: "4kN",
-    description: "High-performance turbojet for medium-range UAV platforms and cruise missile systems. Designed for sustained high-altitude operations.",
-    image: engine4kn,
-    path: "/products/4kn",
-  },
-  {
-    title: "1.2kN Turbojet Engine",
-    thrust: "1.2kN",
-    description: "Compact, reliable turbojet optimized for tactical drones and loitering munition platforms with extended endurance.",
-    image: engine12kn,
-    path: "/products/1-2kn",
-  },
-  {
-    title: "500N Micro Turbojet Engine",
-    thrust: "500N",
-    description: "Ultra-compact micro turbojet for small UAV platforms, target drones, and experimental aerospace research.",
-    image: engine500n,
-    path: "/products/500n",
-  },
-];
+interface Props {
+  title: string;
+  thrust: string;
+  description: string;
+  image: string;
+  path: string;
+  delay?: number;
+}
 
-const Products = () => {
+const ProductCard = ({ title, thrust, description, image, path, delay = 0 }: Props) => {
   return (
-    <div className="min-h-screen pt-20">
-      <section className="py-24 md:py-32">
-        <div className="container mx-auto px-4 md:px-8">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-primary text-xs font-semibold uppercase tracking-[0.2em] mb-4"
-          >
-            Propulsion Systems
-          </motion.p>
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.1 }}
-            className="text-4xl md:text-7xl font-black text-foreground mb-6"
-          >
-            Our Products
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-            className="text-muted-foreground max-w-2xl mb-16"
-          >
-            A complete range of indigenous small gas turbine engines designed for unmanned aerial platforms across multiple thrust classes.
-          </motion.p>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.map((p, i) => (
-              <ProductCard key={p.path} {...p} delay={i * 0.15} />
-            ))}
-          </div>
+    <SectionReveal delay={delay}>
+      <Link
+        to={path}
+        className="group block bg-zinc-900 border border-white/10 rounded-xl overflow-hidden hover:border-blue-500 hover:shadow-[0_0_30px_rgba(59,130,246,0.25)] transition-all duration-500"
+      >
+        {/* Image Container */}
+        <div className="aspect-square overflow-hidden bg-black flex items-center justify-center p-8">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-700"
+            loading="lazy"
+          />
         </div>
-      </section>
-    </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <p className="text-blue-400 text-xs font-semibold uppercase tracking-widest mb-2">
+            {thrust} Thrust
+          </p>
+
+          <h3 className="text-white text-lg font-bold mb-2 group-hover:text-blue-400 transition">
+            {title}
+          </h3>
+
+          <p className="text-gray-400 text-sm leading-relaxed mb-4">
+            {description}
+          </p>
+
+          <span className="inline-flex items-center gap-2 text-blue-400 text-sm font-medium group-hover:gap-3 transition-all">
+            Learn More <ArrowRight className="w-4 h-4" />
+          </span>
+        </div>
+      </Link>
+    </SectionReveal>
   );
 };
 
-export default Products;
+export default ProductCard;
