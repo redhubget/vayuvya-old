@@ -40,7 +40,7 @@ const App: React.FC = () => {
               <Route path="/software" element={<Software />} />
               <Route path="/products" element={<Products />} />
             <Route path="/products/4kn" element={<Product4kN />} />
-            <Route path="/products/1-2kn" element={<Product12kN />} />
+            <Route path="/products/1.2kn" element={<Product12kN />} />
             <Route path="/products/500n" element={<Product500N />} />
               <Route path="/news-events" element={<NewsEvents />} />
               <Route path="/careers" element={<Careers />} />
