@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-/**
- * IMPORTANT:
- * These explicit icon imports avoid a known Vite 5 + lucide-react
- * tree-shaking hang during production build on Vercel.
- */
 import Menu from "lucide-react/dist/esm/icons/menu";
 import X from "lucide-react/dist/esm/icons/x";
 import ChevronDown from "lucide-react/dist/esm/icons/chevron-down";
@@ -33,57 +28,52 @@ const Navigation: React.FC = () => {
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8 text-white">
 
-         {/* Products Dropdown */}
-<div
-  className="relative"
-  onMouseEnter={() => setProductsOpen(true)}
-  onMouseLeave={() => setProductsOpen(false)}
->
-  <button className="flex items-center gap-1 hover:text-blue-400 transition">
-    Products <ChevronDown className="w-4 h-4" />
-  </button>
+          {/* Products Dropdown */}
+          <div
+            className="relative"
+            onMouseEnter={() => setProductsOpen(true)}
+            onMouseLeave={() => setProductsOpen(false)}
+          >
+            <button className="flex items-center gap-1 hover:text-blue-400 transition">
+              Products <ChevronDown className="w-4 h-4" />
+            </button>
 
-  {productsOpen && (
-    <div className="absolute top-full left-0 mt-2 w-56 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
+            {productsOpen && (
+              <div className="absolute left-0 top-full pt-2 w-56 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
 
-      {/* Main Products Page */}
-      <Link
-        to="/products"
-        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-      >
-        All Jet Engines
-      </Link>
+                <Link
+                  to="/products"
+                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+                >
+                  All Jet Engines
+                </Link>
 
-      {/* Divider */}
-      <div className="border-t border-gray-700"></div>
+                <div className="border-t border-gray-700"></div>
 
-      {/* Individual Products */}
-      <Link
-        to="/products/4kN"
-        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-      >
-        4kN Turbojet Engine
-      </Link>
+                <Link
+                  to="/products/4kn"
+                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+                >
+                  4kN Turbojet Engine
+                </Link>
 
-      <Link
-        to="/products/12kN"
-        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-      >
-        1.2kN Turbojet Engine
-      </Link>
+                <Link
+                  to="/products/1-2kn"
+                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+                >
+                  1.2kN Turbojet Engine
+                </Link>
 
-      <Link
-        to="/products/500N"
-        className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-      >
-        500N Micro Turbojet
-      </Link>
+                <Link
+                  to="/products/500n"
+                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
+                >
+                  500N Micro Turbojet
+                </Link>
 
-    </div>
-  )}
-</div>
+              </div>
             )}
-  
+          </div>
 
           <Link to="/about" className="hover:text-blue-400 transition">
             About Us
@@ -113,6 +103,7 @@ const Navigation: React.FC = () => {
         <div className="md:hidden bg-black/95 border-t border-white/10">
           <div className="flex flex-col px-6 py-4 space-y-4 text-white">
 
+            {/* Mobile Products Dropdown */}
             <button
               className="flex items-center justify-between"
               onClick={() => setProductsOpen(!productsOpen)}
@@ -127,13 +118,39 @@ const Navigation: React.FC = () => {
 
             {productsOpen && (
               <div className="pl-4 space-y-2 text-sm text-gray-300">
+
                 <Link
                   to="/products"
                   onClick={() => setMobileOpen(false)}
                   className="block hover:text-white"
                 >
-                  Jet Engines
+                  All Jet Engines
                 </Link>
+
+                <Link
+                  to="/products/4kn"
+                  onClick={() => setMobileOpen(false)}
+                  className="block hover:text-white"
+                >
+                  4kN Turbojet Engine
+                </Link>
+
+                <Link
+                  to="/products/1-2kn"
+                  onClick={() => setMobileOpen(false)}
+                  className="block hover:text-white"
+                >
+                  1.2kN Turbojet Engine
+                </Link>
+
+                <Link
+                  to="/products/500n"
+                  onClick={() => setMobileOpen(false)}
+                  className="block hover:text-white"
+                >
+                  500N Micro Turbojet
+                </Link>
+
               </div>
             )}
 
@@ -148,6 +165,7 @@ const Navigation: React.FC = () => {
             <Link to="/contact" onClick={() => setMobileOpen(false)}>
               Contact
             </Link>
+
           </div>
         </div>
       )}
