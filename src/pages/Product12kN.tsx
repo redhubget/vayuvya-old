@@ -2,7 +2,7 @@
  * Product12kN — dedicated page for the 1.2kN Turbojet Engine.
  */
 import ProductDetail from "@/components/ProductDetail";
-import engine12kn from "@/assets/engine-12kn.png";
+import engine12kn from "@/lovable-uploads/2nd.jpg";
 
 const Product12kN = () => (
   <ProductDetail
