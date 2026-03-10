@@ -11,7 +11,7 @@ const products = [
     thrust: "4kN",
     description:
       "High-performance turbojet for medium-range UAV platforms and cruise missile systems. Designed for sustained high-altitude operations.",
-    image: "/lovable-uploads/1st.png",
+    image: "/lovable-uploads/4kN.jpeg",
     path: "/products/4kn",
   },
   {
