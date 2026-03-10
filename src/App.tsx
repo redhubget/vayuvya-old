@@ -11,6 +11,9 @@ import Team from "./pages/Team";
 import Aerospace from "./pages/Aerospace";
 import Software from "./pages/Software";
 import Products from "./pages/Products";
+import Product4kN from"./pages/Product4kN";
+import Product12kN from"./pages/Product12kN";
+import Product500N from"./pages/Product500N";
 import NewsEvents from "./pages/NewsEvents";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
@@ -36,6 +39,9 @@ const App: React.FC = () => {
               <Route path="/aerospace" element={<Aerospace />} />
               <Route path="/software" element={<Software />} />
               <Route path="/products" element={<Products />} />
+            <Route path="/products/4kn" element={<Product4kN />} />
+            <Route path="/products/1-2kn" element={<Product12kN />} />
+            <Route path="/products/500n" element={<Product500N />} />
               <Route path="/news-events" element={<NewsEvents />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
