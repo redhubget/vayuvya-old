@@ -122,4 +122,18 @@
     font-family: 'Poppins', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     letter-spacing: 0.01em;
   }
+  @keyframes partner-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-partner-scroll {
+  display: flex;
+  width: max-content;
+  animation: partner-scroll 30s linear infinite;
+}
 }
