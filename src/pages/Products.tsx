@@ -3,8 +3,8 @@
  */
 import { motion } from "framer-motion";
 import ProductCard from "@/components/ProductCard";
-import engine4kn from "/lovable-uploads/1st.jpg";
-import engine12kn from "/lovable-uploads/2nd.jpg";
+import engine4kn from "/lovable-uploads/1st.png";
+import engine12kn from "/lovable-uploads/2nd.png";
 import engine500n from "/lovable-uploads/500.jpeg";;
 
 const products = [
