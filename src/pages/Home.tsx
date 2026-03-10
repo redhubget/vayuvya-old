@@ -109,68 +109,62 @@ const Home: React.FC = () => {
             <div key={index} className="p-8 bg-black/70 border border-gray-700 rounded-xl hover:border-blue-500 transition">
               <h3 className="text-lg font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-400">{feature.description}</p>
-            </div>
+             {/* PARTNERS SECTION */}
+    <section className="relative py-20 bg-black border-t border-gray-800 overflow-hidden">
+
+      <h2 className="text-4xl font-light text-center text-white mb-12">
+        Our Partners & Ecosystem
+      </h2>
+
+      <div className="relative w-full overflow-hidden">
+
+        <div className="flex gap-16 items-center animate-partner-scroll whitespace-nowrap">
+
+          {[
+            "/lovable-uploads/KDEM.png",
+            "/lovable-uploads/STARTUP KARNATAKA.png",
+            "/lovable-uploads/DSE.jpg",
+            "/lovable-uploads/SR.jpg",
+            "/lovable-uploads/JAIN.png",
+            "/lovable-uploads/MSME.jpg",
+            "/lovable-uploads/INSPACE.png",
+            "/lovable-uploads/MIA.jpg",
+            "/lovable-uploads/STARTUP INDIA.png",
+          ].map((logo, i) => (
+            <img
+              key={i}
+              src={logo}
+              alt="partner"
+              className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
+            />
           ))}
+
+          {/* duplicate logos for seamless scroll */}
+          {[
+            "/lovable-uploads/KDEM.png",
+            "/lovable-uploads/STARTUP KARNATAKA.png",
+            "/lovable-uploads/DSE.jpg",
+            "/lovable-uploads/SR.jpg",
+            "/lovable-uploads/JAIN.png",
+            "/lovable-uploads/MSME.jpg",
+            "/lovable-uploads/INSPACE.png",
+            "/lovable-uploads/MIA.jpg",
+            "/lovable-uploads/STARTUP INDIA.png",
+          ].map((logo, i) => (
+            <img
+              key={`dup-${i}`}
+              src={logo}
+              alt="partner"
+              className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
+            />
+          ))}
+
         </div>
-      </section>
 
-    </div>
-  );
-};
+      </div>
 
-{/* PARTNERS SECTION */}
-<section className="relative py-20 bg-black border-t border-gray-800 overflow-hidden">
-
-  <h2 className="text-4xl font-light text-center text-white mb-12">
-    Our Partners & Ecosystem
-  </h2>
-
-  <div className="relative w-full overflow-hidden">
-
-    <div className="flex gap-16 items-center animate-partner-scroll whitespace-nowrap">
-
-      {[
-        "/lovable-uploads/KDEM.png",
-        "/lovable-uploads/STARTUP KARNATAKA.png",
-        "/lovable-uploads/DSE.jpg",
-        "/lovable-uploads/SR.jpg",
-        "/lovable-uploads/JAIN.png",
-        "/lovable-uploads/MSME.jpg",
-        "/lovable-uploads/INSPACE.png",
-        "/lovable-uploads/MIA.jpg",
-        "/lovable-uploads/STARTUP INDIA.png",
-      ].map((partner, i) => (
-        <div
-          key={i}
-          className="text-gray-300 text-lg font-semibold tracking-wide opacity-70 hover:opacity-100 transition"
-        >
-          {partner}
-        </div>
-      ))}
-
-      {/* Duplicate logos for seamless scroll */}
-      {[
-        "/lovable-uploads/KDEM.png",
-        "/lovable-uploads/STARTUP KARNATAKA.png",
-        "/lovable-uploads/DSE.jpg",
-        "/lovable-uploads/SR.jpg",
-        "/lovable-uploads/JAIN.png",
-        "/lovable-uploads/MSME.jpg",
-        "/lovable-uploads/INSPACE.png",
-        "/lovable-uploads/MIA.jpg",
-        "/lovable-uploads/STARTUP INDIA.png"
-      ].map((partner, i) => (
-        <div
-          key={`dup-${i}`}
-          className="text-gray-300 text-lg font-semibold tracking-wide opacity-70 hover:opacity-100 transition"
-        >
-          {partner}
-        </div>
-      ))}
-
-    </div>
+    </section>
 
   </div>
+);
 
-</section>
-export default Home;
