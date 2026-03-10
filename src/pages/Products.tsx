@@ -1,9 +1,11 @@
 /**
  * Products — listing page for all propulsion systems.
  */
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import SectionReveal from "./SectionReveal";
+import { motion } from "framer-motion";
+import ProductCard from "@/components/ProductCard";
+import engine4kn from "/lovable-uploads/1st.png";
+import engine12kn from "/lovable-uploads/2nd.png";
+import engine500n from "/lovable-uploads/500.jpeg";;
 
 interface Props {
   title: string;
