@@ -27,10 +27,7 @@ const Home: React.FC = () => {
 
         <div
           className="absolute inset-0 w-full h-full bg-center bg-no-repeat bg-cover"
-          style={{
-          backgroundImage: "url('/test.jpeg')",
-            
-          }}
+          style={{ backgroundImage: "url('/test.jpeg')" }}
         />
 
         <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-black/80" />
@@ -69,7 +66,7 @@ const Home: React.FC = () => {
       {/* ACHIEVEMENTS */}
       <Achievements />
 
-      {/* INTRO SECTION */}
+      {/* INTRO */}
       <section className="relative py-20 bg-black text-center">
         <h2 className="text-4xl font-light text-white mb-6">
           Advancing India's Technology Future
@@ -109,62 +106,69 @@ const Home: React.FC = () => {
             <div key={index} className="p-8 bg-black/70 border border-gray-700 rounded-xl hover:border-blue-500 transition">
               <h3 className="text-lg font-semibold text-white mb-3">{feature.title}</h3>
               <p className="text-gray-400">{feature.description}</p>
-             {/* PARTNERS SECTION */}
-    <section className="relative py-20 bg-black border-t border-gray-800 overflow-hidden">
-
-      <h2 className="text-4xl font-light text-center text-white mb-12">
-        Our Partners & Ecosystem
-      </h2>
-
-      <div className="relative w-full overflow-hidden">
-
-        <div className="flex gap-16 items-center animate-partner-scroll whitespace-nowrap">
-
-          {[
-            "/lovable-uploads/KDEM.png",
-            "/lovable-uploads/STARTUP KARNATAKA.png",
-            "/lovable-uploads/DSE.jpg",
-            "/lovable-uploads/SR.jpg",
-            "/lovable-uploads/JAIN.png",
-            "/lovable-uploads/MSME.jpg",
-            "/lovable-uploads/INSPACE.png",
-            "/lovable-uploads/MIA.jpg",
-            "/lovable-uploads/STARTUP INDIA.png",
-          ].map((logo, i) => (
-            <img
-              key={i}
-              src={logo}
-              alt="partner"
-              className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
-            />
+            </div>
           ))}
+        </div>
+      </section>
 
-          {/* duplicate logos for seamless scroll */}
-          {[
-            "/lovable-uploads/KDEM.png",
-            "/lovable-uploads/STARTUP KARNATAKA.png",
-            "/lovable-uploads/DSE.jpg",
-            "/lovable-uploads/SR.jpg",
-            "/lovable-uploads/JAIN.png",
-            "/lovable-uploads/MSME.jpg",
-            "/lovable-uploads/INSPACE.png",
-            "/lovable-uploads/MIA.jpg",
-            "/lovable-uploads/STARTUP INDIA.png",
-          ].map((logo, i) => (
-            <img
-              key={`dup-${i}`}
-              src={logo}
-              alt="partner"
-              className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
-            />
-          ))}
+      {/* PARTNERS SECTION */}
+      <section className="relative py-20 bg-black border-t border-gray-800 overflow-hidden">
+
+        <h2 className="text-4xl font-light text-center text-white mb-12">
+          Our Partners & Ecosystem
+        </h2>
+
+        <div className="relative w-full overflow-hidden">
+
+          <div className="flex gap-16 items-center animate-partner-scroll whitespace-nowrap">
+
+            {[
+              "/lovable-uploads/KDEM.png",
+              "/lovable-uploads/STARTUP KARNATAKA.png",
+              "/lovable-uploads/DSE.jpg",
+              "/lovable-uploads/SR.jpg",
+              "/lovable-uploads/JAIN.png",
+              "/lovable-uploads/MSME.jpg",
+              "/lovable-uploads/INSPACE.png",
+              "/lovable-uploads/MIA.jpg",
+              "/lovable-uploads/STARTUP INDIA.png",
+            ].map((logo, i) => (
+              <img
+                key={i}
+                src={logo}
+                alt="partner"
+                className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
+              />
+            ))}
+
+            {/* duplicate logos for smooth loop */}
+            {[
+              "/lovable-uploads/KDEM.png",
+              "/lovable-uploads/STARTUP KARNATAKA.png",
+              "/lovable-uploads/DSE.jpg",
+              "/lovable-uploads/SR.jpg",
+              "/lovable-uploads/JAIN.png",
+              "/lovable-uploads/MSME.jpg",
+              "/lovable-uploads/INSPACE.png",
+              "/lovable-uploads/MIA.jpg",
+              "/lovable-uploads/STARTUP INDIA.png",
+            ].map((logo, i) => (
+              <img
+                key={`dup-${i}`}
+                src={logo}
+                alt="partner"
+                className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
+              />
+            ))}
+
+          </div>
 
         </div>
 
-      </div>
+      </section>
 
-    </section>
+    </div>
+  );
+};
 
-  </div>
-);
 export default Home;
