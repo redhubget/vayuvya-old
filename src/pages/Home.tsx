@@ -123,44 +123,42 @@ const Home: React.FC = () => {
           <div className="flex gap-16 items-center animate-partner-scroll whitespace-nowrap">
 
             {[
-              "/lovable-uploads/KDEM.png",
-              "/lovable-uploads/STARTUP KARNATAKA.png",
-              "/lovable-uploads/DSE.jpg",
-              "/lovable-uploads/SR.jpg",
-              "/lovable-uploads/JAIN.png",
-              "/lovable-uploads/MSME.jpg",
-              "/lovable-uploads/INSPACE.png",
-              "/lovable-uploads/MIA.jpg",
-              "/lovable-uploads/STARTUP INDIA.png",
-            ].map((logo, i) => (
-              <img
-                key={i}
-                src={logo}
-                alt="partner"
-                className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
-              />
-            ))}
-
+  "/lovable-uploads/KDEM.png",
+  "/lovable-uploads/STARTUP KARNATAKA.png",
+  "/lovable-uploads/DSE.jpg",
+  "/lovable-uploads/SR.jpg",
+  "/lovable-uploads/JAIN.png",
+  "/lovable-uploads/MSME.jpg",
+  "/lovable-uploads/INSPACE.png",
+  "/lovable-uploads/MIA.jpg",
+  "/lovable-uploads/STARTUP INDIA.png",
+].map((logo, i) => (
+  <img
+    key={i}
+    src={logo}
+    alt="partner"
+    className="h-24 object-contain transition hover:scale-105"
+  />
+))}
             {/* duplicate logos for smooth loop */}
-            {[
-              "/lovable-uploads/KDEM.png",
-              "/lovable-uploads/STARTUP KARNATAKA.png",
-              "/lovable-uploads/DSE.jpg",
-              "/lovable-uploads/SR.jpg",
-              "/lovable-uploads/JAIN.png",
-              "/lovable-uploads/MSME.jpg",
-              "/lovable-uploads/INSPACE.png",
-              "/lovable-uploads/MIA.jpg",
-              "/lovable-uploads/STARTUP INDIA.png",
-            ].map((logo, i) => (
-              <img
-                key={`dup-${i}`}
-                src={logo}
-                alt="partner"
-                className="h-16 opacity-70 hover:opacity-100 transition grayscale hover:grayscale-0"
-              />
-            ))}
-
+           {[
+  "/lovable-uploads/KDEM.png",
+  "/lovable-uploads/STARTUP KARNATAKA.png",
+  "/lovable-uploads/DSE.jpg",
+  "/lovable-uploads/SR.jpg",
+  "/lovable-uploads/JAIN.png",
+  "/lovable-uploads/MSME.jpg",
+  "/lovable-uploads/INSPACE.png",
+  "/lovable-uploads/MIA.jpg",
+  "/lovable-uploads/STARTUP INDIA.png",
+].map((logo, i) => (
+  <img
+    key={`dup-${i}`}
+    src={logo}
+    alt="partner"
+    className="h-24 object-contain transition hover:scale-105"
+  />
+))}
           </div>
 
         </div>
