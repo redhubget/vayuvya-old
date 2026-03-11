@@ -66,18 +66,18 @@ const Home: React.FC = () => {
       {/* ACHIEVEMENTS */}
       <Achievements />
 
- <section className="relative py-24 text-center overflow-hidden">
+<section className="relative py-24 text-center overflow-hidden">
 
   {/* Background Image */}
   <div
-    className="absolute inset-0 bg-center bg-cover bg-no-repeat"
+    className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-110"
     style={{
-      backgroundImage: "url('/lovable-uploads/5486001-engine-wallpapers.png')",
+      backgroundImage: "url('/lovable-uploads/your-image.jpg')",
     }}
   />
 
-  {/* Dark Overlay for readability */}
-  <div className="absolute inset-0 bg-black/70" />
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/80" />
 
   {/* Content */}
   <div className="relative z-10 max-w-4xl mx-auto px-6">
