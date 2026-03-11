@@ -95,6 +95,19 @@ const Home: React.FC = () => {
   </div>
 
 </section>
+<section className="relative py-24 text-center overflow-hidden">
+
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-110"
+    style={{
+      backgroundImage: "url('/lovable-uploads/aer.jpg')",
+    }}
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/80" />
+      
       {/* CAPABILITIES */}
       <section className="relative py-20 bg-black/90">
         <h2 className="text-4xl font-light text-center text-white mb-16">
