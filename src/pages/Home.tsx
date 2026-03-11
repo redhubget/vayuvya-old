@@ -72,7 +72,7 @@ const Home: React.FC = () => {
   <div
     className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-110"
     style={{
-      backgroundImage: "url('/lovable-uploads/your-image.jpg')",
+      backgroundImage: "url('/lovable-uploads/5486001-engine-wallpapers.png')",
     }}
   />
 
