@@ -66,21 +66,32 @@ const Home: React.FC = () => {
       {/* ACHIEVEMENTS */}
       <Achievements />
 
-    <section className="relative py-20 bg-black text-center overflow-hidden">
+ <section className="relative py-24 text-center overflow-hidden">
 
-  {/* background grid */}
-  <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:80px_80px]" />
-      {/* intro*/}
-  <div className="relative z-10">
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-center bg-cover bg-no-repeat"
+    style={{
+      backgroundImage: "url('/lovable-uploads/1st.jpg')",
+    }}
+  />
+
+  {/* Dark Overlay for readability */}
+  <div className="absolute inset-0 bg-black/70" />
+
+  {/* Content */}
+  <div className="relative z-10 max-w-4xl mx-auto px-6">
+
     <h2 className="text-4xl font-light text-white mb-6">
       Advancing India's Technology Future
     </h2>
 
-    <p className="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed">
+    <p className="text-gray-300 text-lg leading-relaxed">
       Vayuvya Defence designs and manufactures cutting-edge aerospace,
-      software, and AI solutions. Our mission is to power India's future with
-      reliable, innovative, and efficient systems.
+      software, and AI solutions. Our mission is to power India's future
+      with reliable, innovative, and efficient systems.
     </p>
+
   </div>
 
 </section>
