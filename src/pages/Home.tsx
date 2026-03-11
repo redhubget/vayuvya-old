@@ -95,7 +95,7 @@ const Home: React.FC = () => {
   </div>
 
 </section>
-<section className="relative py-24 text-center overflow-hidden">
+<section className="relative py-24 overflow-hidden">
 
   {/* Background Image */}
   <div
@@ -106,39 +106,75 @@ const Home: React.FC = () => {
   />
 
   {/* Dark Overlay */}
-  <div className="absolute inset-0 bg-black/80" />
-      
-      {/* CAPABILITIES */}
-      <section className="relative py-20 bg-black/90">
-        <h2 className="text-4xl font-light text-center text-white mb-16">
-          Our Capabilities
-        </h2>
+  <div className="absolute inset-0 bg-black/85" />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-          {capabilities.map((cap, index) => (
-            <div key={index} className="p-8 bg-black/70 border border-gray-700 rounded-xl hover:border-blue-500 transition">
-              <h3 className="text-xl font-semibold text-white mb-4">{cap.title}</h3>
-              <p className="text-gray-400">{cap.description}</p>
-            </div>
-          ))}
+  {/* Content */}
+  <div className="relative z-10">
+
+    <h2 className="text-4xl font-light text-center text-white mb-16">
+      Our Capabilities
+    </h2>
+
+    <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+      {capabilities.map((cap, index) => (
+        <div
+          key={index}
+          className="p-8 bg-black/60 border border-gray-700 rounded-xl hover:border-blue-500 transition backdrop-blur-sm"
+        >
+          <h3 className="text-xl font-semibold text-white mb-4">
+            {cap.title}
+          </h3>
+
+          <p className="text-gray-300">
+            {cap.description}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
 
-      {/* FEATURES */}
-      <section className="relative py-20 bg-black/95">
-        <h2 className="text-4xl font-light text-center text-white mb-16">
-          Why Choose Vayuvya Defence?
-        </h2>
+  </div>
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-          {features.map((feature, index) => (
-            <div key={index} className="p-8 bg-black/70 border border-gray-700 rounded-xl hover:border-blue-500 transition">
-              <h3 className="text-lg font-semibold text-white mb-3">{feature.title}</h3>
-              <p className="text-gray-400">{feature.description}</p>
-            </div>
-          ))}
+</section>
+      <section className="relative py-24 overflow-hidden">
+
+  {/* Background Image */}
+  <div
+    className="absolute inset-0 bg-center bg-cover bg-no-repeat scale-110"
+    style={{
+      backgroundImage: "url('/lovable-uploads/jet.jpg')",
+    }}
+  />
+
+  {/* Dark Overlay */}
+  <div className="absolute inset-0 bg-black/85" />
+
+  {/* Content */}
+  <div className="relative z-10">
+
+    <h2 className="text-4xl font-light text-center text-white mb-16">
+      Why Choose Vayuvya Defence?
+    </h2>
+
+    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
+      {features.map((feature, index) => (
+        <div
+          key={index}
+          className="p-8 bg-black/60 border border-gray-700 rounded-xl hover:border-blue-500 transition backdrop-blur-sm"
+        >
+          <h3 className="text-lg font-semibold text-white mb-3">
+            {feature.title}
+          </h3>
+
+          <p className="text-gray-300">
+            {feature.description}
+          </p>
         </div>
-      </section>
+      ))}
+    </div>
+
+  </div>
+
+</section>
 
       {/* PARTNERS SECTION */}
       <section className="relative py-20 bg-black border-t border-gray-800 overflow-hidden">
