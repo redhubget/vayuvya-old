@@ -66,19 +66,24 @@ const Home: React.FC = () => {
       {/* ACHIEVEMENTS */}
       <Achievements />
 
-      {/* INTRO */}
-      <section className="relative py-20 bg-black text-center">
-        <h2 className="text-4xl font-light text-white mb-6">
-          Advancing India's Technology Future
-        </h2>
+    <section className="relative py-20 bg-black text-center overflow-hidden">
 
-        <p className="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed">
-          Vayuvya Defence designs and manufactures cutting-edge aerospace,
-          software, and AI solutions. Our mission is to power India's future with
-          reliable, innovative, and efficient systems.
-        </p>
-      </section>
+  {/* background grid */}
+  <div className="absolute inset-0 opacity-10 bg-[linear-gradient(to_right,#3b82f6_1px,transparent_1px),linear-gradient(to_bottom,#3b82f6_1px,transparent_1px)] bg-[size:80px_80px]" />
+      {/* intro*/}
+  <div className="relative z-10">
+    <h2 className="text-4xl font-light text-white mb-6">
+      Advancing India's Technology Future
+    </h2>
 
+    <p className="text-gray-300 text-lg max-w-4xl mx-auto leading-relaxed">
+      Vayuvya Defence designs and manufactures cutting-edge aerospace,
+      software, and AI solutions. Our mission is to power India's future with
+      reliable, innovative, and efficient systems.
+    </p>
+  </div>
+
+</section>
       {/* CAPABILITIES */}
       <section className="relative py-20 bg-black/90">
         <h2 className="text-4xl font-light text-center text-white mb-16">
