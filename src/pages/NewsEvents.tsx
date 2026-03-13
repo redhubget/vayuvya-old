@@ -1,311 +1,84 @@
-import React from "react";
-import { Calendar, MapPin, ExternalLink } from "lucide-react";
+import { motion } from "framer-motion";
 
-const NewsEvents = () => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
-
-  React.useEffect(() => {
-    scrollToTop();
-  }, []);
-
-  const newsItems = [
-    {
-      id: 1,
-      title: "Vayuvya Defence Showcases Revolutionary Micro Jet Engine Technology",
-      date: "December 2024",
-      location: "Mysuru Big Tech Show",
-      description:
-        "Our team demonstrated India's first indigenous micro jet engine at the prestigious Mysuru Big Tech Show, attracting significant attention from industry experts and potential partners.",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/9e922077-ae7e-4703-aae7-13c51fb9d879.png`,
-      category: "Exhibition",
-    },
-    {
-      id: 2,
-      title: "Technical Deep Dive: Advanced Propulsion Systems for Defence Applications",
-      date: "December 2024",
-      location: "Mysuru Big Tech Show",
-      description:
-        "Engaging discussions with industry professionals about our cutting-edge micro turbine engines and their applications in UAVs and tactical aerospace platforms.",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/f3a1f760-246b-49e6-bc89-1be9744dcafb.png`,
-      category: "Technology",
-    },
-    {
-      id: 3,
-      title: "Innovation Spotlight: Gonagoor Tech Partnership",
-      date: "December 2024",
-      location: "Tech Exhibition",
-      description:
-        "Highlighting our collaboration with Gonagoor Tech in developing next-generation AI-powered aerospace solutions.",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/5b01e4a1-3015-43f0-8159-082f39414c11.png`,
-      category: "Partnership",
-    },
-    {
-      id: 4,
-      title: "Industry Recognition: Media Coverage of Our Breakthrough Technologies",
-      date: "December 2024",
-      location: "Mysuru Event",
-      description:
-        "Vayuvya Defence receives media coverage for its innovative approach to indigenous defence technology development.",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/1af7ec95-8e51-4d54-8ad0-e73af0686cc1.png`,
-      category: "Media",
-    },
-    {
-      id: 5,
-      title: "Vayuvya Defence MicroJet Engine Announcement",
-      date: "December 2025",
-      location: "South Park Commons India",
-      description:
-        "Our MicroJet Engine delivers 4 kN thrust with dual combustion chambers and Jet-A1 fuel. Designed for drones and micro-UAVs.",
-      image: `${import.meta.env.BASE_URL}lovable-uploads/Alpha.jpeg`,
-      category: "Innovation",
-      link: "https://x.com/alpha_defense/status/1999692285362208961",
-    },
+const newsItems = [
   {
-    id: 6,
-    title: "500N Micro Turbojet Engine Unveiled",
+    title: "Vayuvya Defence Engine Development Update",
     date: "March 2026",
-    location: "Vayuvya Defence",
-    description:
-      "Vayuvya Defence unveiled the next variant in its propulsion roadmap — the 500N Micro Turbojet Engine. Designed for enhanced thrust performance and mission adaptability, the engine delivers 500 N thrust with a high thrust-to-weight ratio and optimized airflow architecture for next-generation UAV platforms.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/1st.jpg`,
-    category: "Product Launch",
-    link: "https://www.linkedin.com/posts/vayuvya-defence_microturbojet-500n-aerospaceinnovation-activity-7433051595552018433-S_GW",
+    image: "/news/idr1.png",
   },
-
   {
-    id: 7,
-    title: "Strategic R&D Collaboration Discussions",
-    date: "March 2026",
-    location: "Vayuvya Defence Facility",
-    description:
-      "The Vayuvya Defence team hosted Spacerolls Aerospace for detailed discussions on integrating R&D and design capabilities. The meeting focused on collaborative innovation, technology alignment, and long-term strategic development for future propulsion systems.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/2nd.jpg`,
-    category: "Collaboration",
-    link: "https://www.linkedin.com/posts/vayuvya-defence_innovation-collaboration-rnd-activity-7432380346618314753-tOgh",
-  },
-
-  {
-    id: 8,
-    title: "Indigenous Jet Engine Development Progress",
+    title: "Indigenous Micro Turbojet Testing Progress",
     date: "February 2026",
-    location: "Vayuvya Defence",
-    description:
-      "As part of its long-term roadmap, Vayuvya Defence announced the progress of its indigenous micro jet engine program. The propulsion system has entered active testing, focusing on thrust stability, thermal behaviour, and system reliability.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/3rd.jpg`,
-    category: "Engineering",
-    link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-indigenoustech-aerospaceengineering-activity-7426930018485932032-Jsf1",
+    image: "/news/idr2.png",
   },
-
   {
-    id: 9,
-    title: "Strategic Aerospace Partnership Announcement",
-    date: "February 2026",
-    location: "Bengaluru",
-    description:
-      "Vayuvya Defence announced a strategic collaboration with Spacerolls Aerospace to integrate their decade-long research in compressor and turbine blade technology into upcoming propulsion systems.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/2nd.jpg`,
-    category: "Partnership",
-    link: "https://www.linkedin.com/posts/vayuvya-defence_vayuvyadefence-aerospace-engineering-activity-7429514197119442945-RqkL",
+    title: "Advancing Indigenous Propulsion Systems",
+    date: "January 2026",
+    image: "/news/idr3.png",
   },
-    {
-    id: 10,
-    title: "DPIIT Recognised Defence Startup",
-    date: "2025",
-    location: "Government of India",
-    description:
-      "Recognised by the Department for Promotion of Industry and Internal Trade (DPIIT) as an authorised defence startup, validating our innovation, credibility, and contribution to India’s strategic technology ecosystem.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/certificate1.jpg`,
-    category: "Recognition"
-  },
-
   {
-    id: 11,
-    title: "Product Launch at Bengaluru Tech Summit 2025",
-    date: "2025",
-    location: "Bengaluru Tech Summit",
-    description:
-      "Officially unveiled our flagship product at the prestigious Bengaluru Tech Summit 2025, showcasing breakthrough innovation to global industry leaders, investors, and technology partners.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/productBts.jpg`,
-    category: "Product Launch"
+    title: "R&D Breakthrough in Compact Jet Engines",
+    date: "December 2025",
+    image: "/news/idr4.png",
   },
-
   {
-    id: 12,
-    title: "Indigenous Jet Engine Assembly Completed",
-    date: "2025",
-    location: "Vayuvya Defence",
-    description:
-      "Successfully completed the full assembly of our in-house developed jet engine, marking a major milestone toward testing and validation of India’s next-generation propulsion technology.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/jet.jpg`,
-    category: "Engineering"
+    title: "Vayuvya Defence Expands Development Program",
+    date: "November 2025",
+    image: "/news/idr5.png",
   },
-
   {
-    id: 13,
-    title: "DRDO Collaboration in Progress for M.A.L.E UAV",
-    date: "2025",
-    location: "India",
-    description:
-      "Vayuvya Defence is currently collaborating with DRDO on next-generation Medium Altitude Long Endurance UAV development.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/drdo.jpg`,
-    category: "Collaboration"
+    title: "Indigenous Aerospace Innovation Milestone",
+    date: "October 2025",
+    image: "/news/idr6.png",
   },
+];
 
-  {
-    id: 14,
-    title: "GTRE Collaboration for Defence Engine Development",
-    date: "2025",
-    location: "India",
-    description:
-      "Working closely with the Gas Turbine Research Establishment (GTRE) to develop and supply advanced propulsion systems for strategic defence applications.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/Gt.jpg`,
-    category: "Collaboration"
-  },
-
-  {
-    id: 15,
-    title: "R&D and Pre-Seed Funding by Gonagoor Technologies",
-    date: "2025",
-    location: "India",
-    description:
-      "Backed by Gonagoor Technologies with dedicated R&D support and pre-seed funding to accelerate next-generation aerospace technology development.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/gonagoor.jpg`,
-    category: "Funding"
-  },
-
-  {
-    id: 16,
-    title: "Elevate 2025 Finalist",
-    date: "2025",
-    location: "Karnataka Startup Ecosystem",
-    description:
-      "Recognized among the top startups in Elevate 2025 for innovation and technological impact in aerospace and defence engineering.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/elevate.jpg`,
-    category: "Recognition"
-  },
-
-  {
-    id: 17,
-    title: "InSpace Validated Satellite Design",
-    date: "2025",
-    location: "IN-SPACe",
-    description:
-      "Our satellite design successfully passed IN-SPACe validation, demonstrating reliability and readiness for advanced space applications.",
-    image: `${import.meta.env.BASE_URL}lovable-uploads/inspace.jpg`,
-    category: "Space Technology"
-  },
-  ];
-
-  const getCategoryColor = (category: string) => {
-    switch (category) {
-      case "Exhibition":
-        return "bg-gray-600";
-      case "Technology":
-        return "bg-gray-600";
-      case "Partnership":
-        return "bg-gray-600";
-      case "Media":
-        return "bg-gray-600";
-      case "Innovation":
-        return "bg-gray-600";
-      default:
-        return "bg-gray-600";
-    }
-  };
-
+export default function News() {
   return (
-    <div className="bg-black text-white font-poppins">
+    <section className="bg-black py-24">
 
-      {/* Hero */}
-      <section className="py-24 border-b border-gray-800">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h1 className="text-5xl font-light mb-6">
-            News & <span className="text-blue-400">Events</span>
-          </h1>
+      <h1 className="text-5xl text-white text-center mb-20 font-light">
+        News & Updates
+      </h1>
 
-          <p className="text-gray-400 max-w-3xl mx-auto text-lg">
-            Updates from Vayuvya Defence including technology showcases,
-            exhibitions, partnerships and product milestones.
-          </p>
-        </div>
-      </section>
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-12">
 
-      {/* News List */}
-      <section className="py-16">
-        <div className="max-w-6xl mx-auto px-4 space-y-8">
+        {newsItems.map((news, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.15 }}
+            viewport={{ once: true }}
+            className="group border border-gray-800 rounded-xl overflow-hidden hover:border-blue-500 transition"
+          >
 
-          {newsItems.map((item) => (
-            <div
-              key={item.id}
-              className="flex flex-col md:flex-row gap-6 border border-gray-800 rounded-xl overflow-hidden hover:border-blue-500 transition"
-            >
-
-              {/* Image */}
-              <div className="md:w-64 h-48 md:h-auto flex-shrink-0 overflow-hidden">
-                <img
-                  src={item.image}
-                  alt={item.title}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="p-6 flex flex-col justify-between">
-
-                {/* Category */}
-                <span
-                  className={`inline-block text-xs px-3 py-1 rounded-full mb-3 text-white ${getCategoryColor(
-                    item.category
-                  )}`}
-                >
-                  {item.category}
-                </span>
-
-                {/* Title */}
-                <h2 className="text-xl font-semibold mb-3 leading-snug">
-                  {item.title}
-                </h2>
-
-                {/* Meta */}
-                <div className="flex flex-wrap gap-4 text-sm text-gray-400 mb-3">
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4" />
-                    {item.date}
-                  </span>
-
-                  <span className="flex items-center gap-1">
-                    <MapPin className="w-4 h-4" />
-                    {item.location}
-                  </span>
-                </div>
-
-                {/* Description */}
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  {item.description}
-                </p>
-
-                {/* Link */}
-                {item.link && (
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 text-blue-400 text-sm hover:underline"
-                  >
-                    Read more
-                    <ExternalLink className="w-4 h-4" />
-                  </a>
-                )}
-              </div>
+            {/* Image */}
+            <div className="overflow-hidden">
+              <img
+                src={news.image}
+                className="w-full h-64 object-cover group-hover:scale-110 transition duration-700"
+              />
             </div>
-          ))}
 
-        </div>
-      </section>
-    </div>
+            {/* Content */}
+            <div className="p-6">
+
+              <p className="text-gray-400 text-sm mb-2">
+                {news.date}
+              </p>
+
+              <h3 className="text-white text-lg font-semibold group-hover:text-blue-400 transition">
+                {news.title}
+              </h3>
+
+            </div>
+
+          </motion.div>
+        ))}
+
+      </div>
+
+    </section>
   );
-};
-
-export default NewsEvents;
+}
