@@ -1,116 +1,108 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
-const news = [
-  {
-    title: "Indigenous Turbojet Engine Development Milestone",
-    image: "/news/idr1.png",
-    date: "March 2026",
-  },
-  {
-    title: "Vayuvya Defence Advances UAV Propulsion Systems",
-    image: "/news/idr2.png",
-    date: "February 2026",
-  },
-  {
-    title: "Compact Gas Turbine Engine Testing Update",
-    image: "/news/idr3.png",
-    date: "January 2026",
-  },
-  {
-    title: "Advancing Indigenous Aerospace Propulsion",
-    image: "/news/idr4.png",
-    date: "December 2025",
-  },
-  {
-    title: "Vayuvya Expands R&D Capabilities",
-    image: "/news/idr5.png",
-    date: "November 2025",
-  },
-  {
-    title: "Micro Turbojet Engine Prototype Progress",
-    image: "/news/idr6.png",
-    date: "October 2025",
-  },
+const images = [
+  "/news/idr1.png",
+  "/news/idr2.png",
+  "/news/idr3.png",
+  "/news/idr4.png",
+  "/news/idr5.png",
+  "/news/idr6.png",
 ];
 
 export default function News() {
-  return (
-    <section className="bg-black text-white py-24">
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
-      <h1 className="text-5xl font-light text-center mb-20">
+  const nextImage = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex((selectedIndex + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    if (selectedIndex === null) return;
+    setSelectedIndex(
+      (selectedIndex - 1 + images.length) % images.length
+    );
+  };
+
+  return (
+    <section className="bg-black py-24 min-h-screen">
+
+      <h1 className="text-5xl text-white text-center mb-20 font-light">
         News & Updates
       </h1>
 
-      <div className="max-w-7xl mx-auto px-6">
+      {/* Masonry Layout */}
+      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 px-6 max-w-7xl mx-auto">
 
-        {/* Featured Article */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="mb-20 group cursor-pointer"
-        >
-          <div className="overflow-hidden rounded-xl">
-
+        {images.map((img, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className="mb-6 break-inside-avoid cursor-pointer overflow-hidden rounded-xl"
+            onClick={() => setSelectedIndex(index)}
+          >
             <img
-              src={news[0].image}
-              className="w-full h-[420px] object-cover group-hover:scale-105 transition duration-700"
+              src={img}
+              className="w-full rounded-xl hover:scale-110 transition duration-700"
             />
-
-          </div>
-
-          <div className="mt-6">
-            <p className="text-gray-400 text-sm mb-2">
-              {news[0].date}
-            </p>
-
-            <h2 className="text-3xl font-semibold group-hover:text-blue-400 transition">
-              {news[0].title}
-            </h2>
-          </div>
-        </motion.div>
-
-
-        {/* News Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-
-          {news.slice(1).map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.15 }}
-              viewport={{ once: true }}
-              className="group cursor-pointer"
-            >
-
-              <div className="overflow-hidden rounded-xl">
-
-                <img
-                  src={item.image}
-                  className="w-full h-60 object-cover group-hover:scale-110 transition duration-700"
-                />
-
-              </div>
-
-              <div className="mt-4">
-
-                <p className="text-gray-400 text-sm mb-1">
-                  {item.date}
-                </p>
-
-                <h3 className="text-lg font-semibold group-hover:text-blue-400 transition">
-                  {item.title}
-                </h3>
-
-              </div>
-
-            </motion.div>
-          ))}
-
-        </div>
+          </motion.div>
+        ))}
 
       </div>
+
+      {/* IMAGE MODAL */}
+      <AnimatePresence>
+
+        {selectedIndex !== null && (
+
+          <motion.div
+            className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+          >
+
+            {/* Close area */}
+            <div
+              className="absolute inset-0"
+              onClick={() => setSelectedIndex(null)}
+            />
+
+            {/* Image */}
+            <motion.img
+              key={images[selectedIndex]}
+              src={images[selectedIndex]}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="max-h-[85vh] max-w-[90vw] rounded-xl z-10 shadow-2xl"
+            />
+
+            {/* Navigation Buttons */}
+            <button
+              onClick={prevImage}
+              className="absolute left-8 text-white text-4xl z-20"
+            >
+              ‹
+            </button>
+
+            <button
+              onClick={nextImage}
+              className="absolute right-8 text-white text-4xl z-20"
+            >
+              ›
+            </button>
+
+          </motion.div>
+
+        )}
+
+      </AnimatePresence>
 
     </section>
   );
