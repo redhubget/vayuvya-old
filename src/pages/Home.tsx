@@ -135,7 +135,7 @@ const Home: React.FC = () => {
   </div>
 
 </section>
-      <section className="relative py-24 overflow-hidden">
+    <section className="relative py-24 overflow-hidden">
 
   {/* Background Image */}
   <div
@@ -151,25 +151,47 @@ const Home: React.FC = () => {
   {/* Content */}
   <div className="relative z-10">
 
-    <h2 className="text-4xl font-light text-center text-white mb-16">
+    <h2 className="text-4xl font-light text-center text-white mb-20">
       Why Choose Vayuvya Defence?
     </h2>
 
-    <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-6">
-      {features.map((feature, index) => (
-        <div
-          key={index}
-          className="p-8 bg-black/60 border border-gray-700 rounded-xl hover:border-blue-500 transition backdrop-blur-sm"
-        >
-          <h3 className="text-lg font-semibold text-white mb-3">
-            {feature.title}
-          </h3>
+    <div className="max-w-6xl mx-auto px-6 relative">
 
-          <p className="text-gray-300">
-            {feature.description}
-          </p>
-        </div>
-      ))}
+      {/* Vertical Timeline Line */}
+      <div className="absolute left-1/2 top-0 -translate-x-1/2 w-[2px] h-full bg-blue-500"></div>
+
+      <div className="space-y-16">
+
+        {features.map((feature, index) => (
+          <div
+            key={index}
+            className={`flex items-center w-full ${
+              index % 2 === 0 ? "justify-start" : "justify-end"
+            }`}
+          >
+
+            {/* Card */}
+            <div className="w-1/2 px-6">
+
+              <div className="bg-black/60 border border-gray-700 p-6 rounded-xl backdrop-blur-sm hover:border-blue-500 transition">
+
+                <h3 className="text-white text-lg font-semibold mb-2">
+                  {feature.title}
+                </h3>
+
+                <p className="text-gray-300 text-sm">
+                  {feature.description}
+                </p>
+
+              </div>
+
+            </div>
+
+          </div>
+        ))}
+
+      </div>
+
     </div>
 
   </div>
