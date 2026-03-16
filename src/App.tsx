@@ -18,7 +18,7 @@ import NewsEvents from "./pages/NewsEvents";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
-
+import Gallery from "./pages/Gallery";
 
 const queryClient = new QueryClient();
 
