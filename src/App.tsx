@@ -45,6 +45,7 @@ const App: React.FC = () => {
               <Route path="/news-events" element={<NewsEvents />} />
               <Route path="/careers" element={<Careers />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/gallery" element={<Gallery />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Layout>
