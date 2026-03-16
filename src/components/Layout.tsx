@@ -28,8 +28,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       ],
     },
     { label: "News & Events", href: "/news-events" },
+     { label: "Gallery", href: "/gallery" },
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
+    
   ];
 
   return (
