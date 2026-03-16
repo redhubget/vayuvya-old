@@ -79,6 +79,7 @@ const Navigation: React.FC = () => {
           <Link to="/contact" className="hover:text-blue-400 transition">
             Contact
           </Link>
+          <Link to="/gallery">Gallery</Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -151,6 +152,7 @@ const Navigation: React.FC = () => {
             <Link to="/contact" onClick={() => setMobileOpen(false)}>
               Contact
             </Link>
+            <Link to="/gallery">Gallery</Link>
 
           </div>
         </div>
