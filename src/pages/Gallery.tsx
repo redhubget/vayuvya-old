@@ -1,26 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-const galleryImages = [
-  "/gallery/1.jpeg",
-  "/gallery/2.jpeg",
-  "/gallery/3.jpeg",
-  "/gallery/4.jpeg",
-  "/gallery/5.jpeg",
-  "/gallery/6.jpeg",
-  "/gallery/8.jpeg",
-  "/gallery/9.jpeg",
-  "/gallery/10.jpeg",
-  "/gallery/12.jpeg",
-  "/gallery/13.jpeg",
-  "/gallery/14.jpeg",
-  "/gallery/15.jpeg",
-  "/gallery/16.jpeg",
-  "/gallery/17.jpeg",
-  "/gallery/18.jpeg",
-  "/gallery/19.jpeg",
-  "/gallery/20.jpeg",
-];
+// AUTO-GENERATE 1 → 35
+const galleryImages = Array.from({ length: 35 }, (_, i) => `/gallery/${i + 1}.jpeg`);
 
 export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -37,6 +19,31 @@ export default function Gallery() {
     );
   };
 
+  // Keyboard navigation + lock scroll
+  useEffect(() => {
+    const handleKey = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+      if (e.key === "Escape") setSelectedIndex(null);
+    };
+
+    window.addEventListener("keydown", handleKey);
+
+    // disable scroll when modal open
+    if (selectedIndex !== null) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKey);
+      document.body.style.overflow = "auto";
+    };
+  }, [selectedIndex]);
+
   return (
     <section className="bg-black py-24 min-h-screen">
 
@@ -52,7 +59,7 @@ export default function Gallery() {
             key={index}
             initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.05 }}
+            transition={{ duration: 0.6, delay: index * 0.03 }}
             viewport={{ once: true }}
             className="mb-6 break-inside-avoid cursor-pointer overflow-hidden rounded-xl"
             onClick={() => setSelectedIndex(index)}
@@ -69,21 +76,20 @@ export default function Gallery() {
 
       </div>
 
-      {/* Image Popup */}
+      {/* MODAL */}
       <AnimatePresence>
-
         {selectedIndex !== null && (
 
           <motion.div
-            className="fixed inset-0 bg-black/80 backdrop-blur-md flex items-center justify-center z-50"
+            className="fixed inset-0 z-50 flex items-center justify-center"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
 
-            {/* Click outside to close */}
+            {/* Background Blur */}
             <div
-              className="absolute inset-0"
+              className="absolute inset-0 bg-black/80 backdrop-blur-md"
               onClick={() => setSelectedIndex(null)}
             />
 
@@ -91,25 +97,33 @@ export default function Gallery() {
             <motion.img
               key={galleryImages[selectedIndex]}
               src={galleryImages[selectedIndex]}
-              className="max-h-[85vh] max-w-[90vw] rounded-xl z-10 shadow-2xl"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
+              className="relative z-10 max-h-[85vh] max-w-[90vw] rounded-xl shadow-2xl"
+              initial={{ scale: 0.85, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.85, opacity: 0 }}
               transition={{ duration: 0.3 }}
             />
 
-            {/* Previous Button */}
+            {/* Close Button */}
+            <button
+              onClick={() => setSelectedIndex(null)}
+              className="absolute top-6 right-6 text-white text-3xl z-20 hover:scale-125 transition"
+            >
+              ✕
+            </button>
+
+            {/* Prev */}
             <button
               onClick={prevImage}
-              className="absolute left-10 text-white text-4xl z-20"
+              className="absolute left-6 text-white text-5xl z-20 hover:scale-125 transition"
             >
               ‹
             </button>
 
-            {/* Next Button */}
+            {/* Next */}
             <button
               onClick={nextImage}
-              className="absolute right-10 text-white text-4xl z-20"
+              className="absolute right-6 text-white text-5xl z-20 hover:scale-125 transition"
             >
               ›
             </button>
@@ -117,7 +131,6 @@ export default function Gallery() {
           </motion.div>
 
         )}
-
       </AnimatePresence>
 
     </section>
