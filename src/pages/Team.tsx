@@ -60,7 +60,7 @@ const Team = () => {
   /* =====================
      INTERNS
   ===================== */
-  const Engineering Team = [
+  const EngineeringTeam = [
     {
       name: "Vijay Vittal",
       role: "Embedded engineer",
