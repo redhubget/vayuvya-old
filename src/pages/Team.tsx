@@ -58,7 +58,7 @@ const Team = () => {
   ];
 
   /* =====================
-     INTERNS
+     ENGINEERING TEAM (FIXED NAME)
   ===================== */
   const EngineeringTeam = [
     {
@@ -163,30 +163,33 @@ const Team = () => {
       </section>
 
       {/* =====================
-          INTERN TEAM
+          ENGINEERING TEAM (FIXED)
       ===================== */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-16">EngineeringTeam</h2>
+          <h2 className="text-4xl font-bold mb-16">Engineering Team</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {interns.map((EngineeringTeam, idx) => (
+            {EngineeringTeam.map((member, idx) => (
               <Card key={idx} className="bg-black/50 border-gray-700 hover:border-blue-400 transition">
                 <CardContent className="p-8 text-center">
                   <Avatar className="w-28 h-28 mx-auto mb-6">
-                    <AvatarImage src={intern.image} />
+                    <AvatarImage src={member.image} />
                     <AvatarFallback className="bg-blue-600 text-xl">
-                      {intern.initials}
+                      {member.initials}
                     </AvatarFallback>
                   </Avatar>
+
                   <h3 className="text-xl font-bold text-white mb-2">
-                    {intern.name}
+                    {member.name}
                   </h3>
+
                   <p className="text-blue-400 font-semibold mb-3">
-                    {intern.role}
+                    {member.role}
                   </p>
+
                   <p className="text-gray-300 text-sm">
-                    {intern.bio}
+                    {member.bio}
                   </p>
                 </CardContent>
               </Card>
