@@ -60,31 +60,31 @@ const Team = () => {
   /* =====================
      INTERNS
   ===================== */
-  const interns = [
+  const Engineering Team = [
     {
       name: "Vijay Vittal",
-      role: "Embedded Intern",
-      bio: "Embedded systems intern focusing on firmware, RTOS applications, hardware bring-up, and sensor integration for aerospace and defence platforms.",
+      role: "Embedded engineer",
+      bio: "Embedded systems engineer focusing on firmware, RTOS applications, hardware bring-up, and sensor integration for aerospace and defence platforms.",
       image: "/lovable-uploads/vijay vittal.png",
       initials: "VV",
     },
     {
       name: "Irfan Ali",
-      role: "Propulsion Intern",
-      bio: "Propulsion intern gaining hands-on experience in propulsion testing, analysis, and design support.",
+      role: "Propulsion engineer",
+      bio: "Propulsion engineer gaining hands-on experience in propulsion testing, analysis, and design support.",
       image: "/lovable-uploads/irfan.jpeg",
       initials: "IA",
     },
     {
       name: "Kalyan Kumar",
-      role: "Propulsion Intern",
+      role: "Propulsion engineer",
       bio: "Focused on hands-on learning in aerospace propulsion, contributing to testing and performance assessment.",
       image: "/lovable-uploads/kalyank.png",
       initials: "KK",
     },
     {
       name: "Shalini K V",
-      role: "Embedded Intern",
+      role: "Embedded engineer",
       bio: "Embedded systems intern working on microcontroller-based development, sensor interfacing, and hardware-software integration for defence platforms.",
       image: "/lovable-uploads/sk.jpeg",
       initials: "SK",
