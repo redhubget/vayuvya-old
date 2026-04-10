@@ -2,7 +2,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 // AUTO-GENERATE 1 → 35
-const galleryImages = Array.from({ length: 35 }, (_, i) => `/gallery/${i + 1}.jpeg`);
+const images = import.meta.glob("/public/gallery/*.{png,jpg,jpeg,webp}", {
+  eager: true,
+  as: "url",
+});
+
+const galleryImages = Object.values(images);
 
 export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
