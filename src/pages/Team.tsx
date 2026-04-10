@@ -167,10 +167,10 @@ const Team = () => {
       ===================== */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-16">Intern Team</h2>
+          <h2 className="text-4xl font-bold mb-16">EngineeringTeam</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {interns.map((intern, idx) => (
+            {interns.map((EngineeringTeam, idx) => (
               <Card key={idx} className="bg-black/50 border-gray-700 hover:border-blue-400 transition">
                 <CardContent className="p-8 text-center">
                   <Avatar className="w-28 h-28 mx-auto mb-6">
