@@ -9,14 +9,14 @@ const Team = () => {
   const leadership = [
     {
       name: "Dhanush D B",
-      role: "Co-Founder & CEO",
+      /* role: "Co-Founder & CEO",*/
       bio: "Aerospace engineer with expertise in propulsion systems and advanced manufacturing. Leading the vision for indigenous defence technology development.",
       image: "/lovable-uploads/39a2fdae-d96c-404c-91b3-c9d798d32f97.png",
       initials: "DD",
     },
     {
       name: "Raghavendra",
-      role: "Co-Founder & CTO",
+      /*role: "Co-Founder & CTO",*/
       bio: "Leads technology strategy, driving innovative and secure aerospace and defense solutions. Focused on turning advanced concepts into practical, high-performance systems.",
       image: "/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png",
       initials: "RG",
