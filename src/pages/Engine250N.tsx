@@ -9,7 +9,7 @@ const specs = [
   { label: "Engine Length", value: "35 cm" },
   { label: "Engine Weight", value: "2.5 kg" },
   { label: "Operating Mach No.", value: "Mach 0.6" },
-  { label: "Operating Altitude", value: "Up to 8 km" },
+  { label: "Operating Altitude", value: "Up to 8 km" },  
 ];
 
 const Engine250N = () => {
@@ -38,32 +38,45 @@ const Engine250N = () => {
         </motion.p>
       </section>
 
-      {/* TOP SPEC HIGHLIGHTS */}
-      <section className="py-16 flex justify-center px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-5xl w-full">
+     {/* TECHNICAL SPECIFICATIONS — 4kN STYLE */}
+<section className="py-24 bg-black">
+  <div className="max-w-5xl mx-auto px-6">
 
-          <div>
-            <h2 className="text-4xl font-bold">250 N</h2>
-            <p className="text-gray-400 mt-2">Micro turbojet</p>
-          </div>
+    {/* Title */}
+    <h2 className="text-3xl md:text-4xl text-white font-[200] mb-16 text-center tracking-wide">
+      Technical Specifications
+    </h2>
 
-          <div>
-            <h2 className="text-4xl font-bold">2.5 kg</h2>
-            <p className="text-gray-400 mt-2">Dry weight</p>
-          </div>
+    {/* Clean Spec Rows */}
+    <div className="space-y-6">
 
-          <div>
-            <h2 className="text-4xl font-bold">110k</h2>
-            <p className="text-gray-400 mt-2">RPM operating range</p>
-          </div>
+      {specs.map((spec, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.05 }}
+          className="flex justify-between items-center border-b border-white/10 pb-4"
+        >
+          <span className="text-gray-400 text-sm">
+            {spec.label}
+          </span>
 
-        </div>
-      </section>
+          <span className="text-white text-lg font-medium">
+            {spec.value}
+          </span>
+        </motion.div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       {/* ENGINE IMAGE */}
       <section className="py-20 flex justify-center px-6">
         <motion.img
-          src="/2nd.png" // 👈 place in public folder
+          src="/lovable-uploads/250N.jpeg" // 👈 place in public folder
           alt="250N Engine"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
