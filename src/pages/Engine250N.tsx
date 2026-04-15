@@ -100,17 +100,7 @@ const Engine250N = () => {
 
       
 
-      {/* CTA */}
-      <section className="py-32 text-center px-6">
-        <h2 className="text-3xl md:text-4xl font-[200] mb-6">
-          Request Detailed Technical Datasheet
-        </h2>
-
-        <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 transition rounded-lg">
-          Contact Team
-        </button>
-      </section>
-
+    
     </div>
   );
 };
