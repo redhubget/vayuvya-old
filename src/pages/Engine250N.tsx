@@ -98,42 +98,7 @@ const Engine250N = () => {
         </p>
       </section>
 
-      {/* TECHNICAL SPEC TABLE */}
-      <section className="py-24 bg-gray-900">
-        <div className="max-w-5xl mx-auto px-6">
-
-          <h2 className="text-4xl text-center mb-12 font-[200] tracking-widest">
-            TECHNICAL SPECIFICATIONS
-          </h2>
-
-          <div className="overflow-hidden rounded-lg border border-gray-700">
-
-            {/* HEADER */}
-            <div className="grid grid-cols-2 bg-blue-900 text-white font-semibold text-sm uppercase tracking-wider">
-              <div className="p-4 border-r border-gray-700">Parameter</div>
-              <div className="p-4">Specification</div>
-            </div>
-
-            {/* ROWS */}
-            {specs.map((spec, index) => (
-              <div
-                key={index}
-                className={`grid grid-cols-2 ${
-                  index % 2 === 0 ? "bg-gray-800" : "bg-gray-700"
-                } border-t border-gray-700`}
-              >
-                <div className="p-4 text-gray-300 border-r border-gray-700">
-                  {spec.label}
-                </div>
-                <div className="p-4 text-white font-medium">
-                  {spec.value}
-                </div>
-              </div>
-            ))}
-
-          </div>
-        </div>
-      </section>
+      
 
       {/* CTA */}
       <section className="py-32 text-center px-6">
