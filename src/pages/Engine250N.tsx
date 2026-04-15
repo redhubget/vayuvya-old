@@ -46,7 +46,7 @@ const Engine250N = () => {
   initial={{ opacity: 0, scale: 0.9 }}
   whileInView={{ opacity: 1, scale: 1 }}
   transition={{ duration: 1 }}
-  className="rounded-xl max-w-2xl w-full mx-auto shadow-2xl object-contain"
+  className="rounded-xl max-w-xl w-full shadow-2xl mx-auto"
 />
       </section>
 
