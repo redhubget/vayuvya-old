@@ -40,14 +40,14 @@ const Engine250N = () => {
 
         {/* ENGINE IMAGE */}
       <section className="py-20 flex justify-center px-6">
-        <motion.img
-          src="/lovable-uploads/250N.jpeg" // 👈 place in public folder
-          alt="250N Engine"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="rounded-xl max-w-4xl w-full shadow-2xl"
-        />
+      <motion.img
+  src="/lovable-uploads/250N.jpeg"
+  alt="250N Engine"
+  initial={{ opacity: 0, scale: 0.9 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 1 }}
+  className="rounded-xl max-w-2xl w-full mx-auto shadow-2xl object-contain"
+/>
       </section>
 
      {/* TECHNICAL SPECIFICATIONS — 4kN STYLE */}
