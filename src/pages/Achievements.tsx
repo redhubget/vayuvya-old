@@ -20,13 +20,14 @@ const items = [
   // New milestones
   { id: 11, title: "Indigenous Jet Engine Debut at South Park Commons", img: `${import.meta.env.BASE_URL}lovable-uploads/southpark.jpeg`, desc: "Unveiled our homegrown jet engine at Bengaluru’s South Park Commons. Grateful to SPC and the audience for the enthusiasm and insightful conversations—fueling our mission to build world-class propulsion systems from India, for the world." },
   { id: 12, title: "Historic Validation of India’s First Private Jet Engine", img: `${import.meta.env.BASE_URL}lovable-uploads/gt.jpeg`, desc: "Our engine was technically validated by the GTRE expert panel—a proud moment for every mind and effort behind it 🇮🇳. Grateful to GTRE for their guidance and support in making this possible." },
-];
 {
   id: 13,
   title: "Presentation to Director General of DRDO",
   img: `${import.meta.env.BASE_URL}lovable-uploads/drdo.jpeg`,
   desc: "Presented Vayuvya Defence’s indigenous propulsion systems and to the Director General of DRDO 🇮🇳. A significant step in showcasing our progress and aligning with India’s vision for self-reliant defence innovation.",
 },
+];
+
 
 const Achievements: React.FC = () => {
   const loopItems = [...items, ...items];
