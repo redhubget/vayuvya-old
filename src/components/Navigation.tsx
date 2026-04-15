@@ -41,27 +41,18 @@ const Navigation: React.FC = () => {
             {productsOpen && (
               <div className="absolute left-0 top-full pt-2 w-56 bg-gray-900 border border-gray-700 rounded-lg overflow-hidden shadow-lg">
 
-                <div className="border-t border-gray-700"></div>
-
                 <Link
-                  to="/products/4kn"
+                  to="/products"
                   className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
                 >
-                  4kN Turbojet Engine
+                  4kN Engine Prototype
                 </Link>
 
                 <Link
-                  to="/products/1.2kn"
+                  to="/products/250n"
                   className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
                 >
-                  1.2kN Turbojet Engine
-                </Link>
-
-                <Link
-                  to="/products/500n"
-                  className="block px-4 py-2 text-sm hover:bg-blue-600 transition"
-                >
-                  500N Micro Turbojet
+                  250N Micro Turbojet
                 </Link>
 
               </div>
@@ -79,7 +70,10 @@ const Navigation: React.FC = () => {
           <Link to="/contact" className="hover:text-blue-400 transition">
             Contact
           </Link>
-          <Link to="/gallery">Gallery</Link>
+
+          <Link to="/gallery" className="hover:text-blue-400 transition">
+            Gallery
+          </Link>
         </div>
 
         {/* Mobile Hamburger */}
@@ -97,7 +91,7 @@ const Navigation: React.FC = () => {
         <div className="md:hidden bg-black/95 border-t border-white/10">
           <div className="flex flex-col px-6 py-4 space-y-4 text-white">
 
-            {/* Mobile Products Dropdown */}
+            {/* Products Dropdown */}
             <button
               className="flex items-center justify-between"
               onClick={() => setProductsOpen(!productsOpen)}
@@ -113,33 +107,28 @@ const Navigation: React.FC = () => {
             {productsOpen && (
               <div className="pl-4 space-y-2 text-sm text-gray-300">
 
-
                 <Link
-                  to="/products/4kn"
+                  to="/products"
                   onClick={() => setMobileOpen(false)}
                   className="block hover:text-white"
                 >
-                  4kN Turbojet Engine
+                  4kN Engine Prototype
                 </Link>
 
                 <Link
-                  to="/products/1.2kn"
+                  to="/products/250n"
                   onClick={() => setMobileOpen(false)}
                   className="block hover:text-white"
                 >
-                  1.2kN Turbojet Engine
-                </Link>
-
-                <Link
-                  to="/products/500n"
-                  onClick={() => setMobileOpen(false)}
-                  className="block hover:text-white"
-                >
-                  500N Micro Turbojet
+                  250N Micro Turbojet
                 </Link>
 
               </div>
             )}
+
+            <Link to="/" onClick={() => setMobileOpen(false)}>
+              Home
+            </Link>
 
             <Link to="/about" onClick={() => setMobileOpen(false)}>
               About Us
@@ -152,7 +141,10 @@ const Navigation: React.FC = () => {
             <Link to="/contact" onClick={() => setMobileOpen(false)}>
               Contact
             </Link>
-            <Link to="/gallery">Gallery</Link>
+
+            <Link to="/gallery" onClick={() => setMobileOpen(false)}>
+              Gallery
+            </Link>
 
           </div>
         </div>
