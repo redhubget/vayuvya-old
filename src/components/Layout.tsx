@@ -18,15 +18,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         { label: "Team", href: "/team" },
       ],
     },
-   /* {
-      label: "Products",
-      href: "/products",
-      dropdown: [
-        { label: "4kN Turbojet Engine", href: "/products/4kn" },
-        { label: "1.2kN Turbojet Engine", href: "/products/1.2kn" },
-        { label: "500N Micro Turbojet", href: "/products/500n" },
-      ],
-    },*/
+  {
+  label: "Products",
+  href: "/products", // 4kN STORY PAGE
+  dropdown: [
+    { label: "250N Micro Turbojet", href: "/products/250n" },
+  ],
+}
     { label: "News & Events", href: "/news-events" },
      { label: "Gallery", href: "/gallery" },
     { label: "Careers", href: "/careers" },
