@@ -24,7 +24,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   dropdown: [
     { label: "250N Micro Turbojet", href: "/products/250n" },
   ],
-}
+},
     { label: "News & Events", href: "/news-events" },
      { label: "Gallery", href: "/gallery" },
     { label: "Careers", href: "/careers" },
