@@ -71,6 +71,67 @@ const Engine4kNStory = () => {
           className="rounded-xl max-w-5xl w-full shadow-2xl"
         />
       </section>
+      
+      {/* 🔧 4kN ENGINE SPECIFICATIONS */}
+<section className="py-24 bg-black">
+  <div className="max-w-5xl mx-auto px-6">
+
+    {/* Title */}
+    <h2 className="text-3xl md:text-4xl text-white font-light mb-12 text-center tracking-wide">
+      Technical Specifications
+    </h2>
+
+    {/* Top Highlights */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 text-center">
+
+      <div className="border border-white/10 rounded-lg p-6">
+        <p className="text-gray-400 text-sm">Thrust Class</p>
+        <h3 className="text-white text-3xl font-semibold mt-2">4 kN</h3>
+        <p className="text-gray-500 text-xs mt-1">Sea-level static</p>
+      </div>
+
+      <div className="border border-white/10 rounded-lg p-6">
+        <p className="text-gray-400 text-sm">Engine Weight</p>
+        <h3 className="text-white text-3xl font-semibold mt-2">40 kg</h3>
+        <p className="text-gray-500 text-xs mt-1">Dry weight</p>
+      </div>
+
+      <div className="border border-white/10 rounded-lg p-6">
+        <p className="text-gray-400 text-sm">Pressure Ratio</p>
+        <h3 className="text-white text-3xl font-semibold mt-2">6:1</h3>
+        <p className="text-gray-500 text-xs mt-1">Overall compressor</p>
+      </div>
+
+    </div>
+
+    {/* Specs Table */}
+    <div className="border border-white/10 rounded-lg overflow-hidden">
+
+      {[
+        ["Configuration", "Single-spool, axial-flow turbojet"],
+        ["Overall Length", "900 mm"],
+        ["Maximum Diameter", "300 mm"],
+        ["Compressor", "4-stage axial compressor"],
+        ["Combustion System", "can combustor"],
+        ["Turbine", "Single stage axial turbine"],
+        ["Max Thrust Class", "4 kN"],
+        ["Thrust Rating Basis", "Sea-level static, controlled test envelope"],
+      ].map((row, i) => (
+        <div
+          key={i}
+          className={`grid grid-cols-2 px-6 py-4 ${
+            i % 2 === 0 ? "bg-white/5" : "bg-white/0"
+          } border-b border-white/10`}
+        >
+          <div className="text-gray-400 text-sm">{row[0]}</div>
+          <div className="text-white text-sm font-medium">{row[1]}</div>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
 
       {/* TIMELINE */}
       <section className="py-32 max-w-5xl mx-auto px-6">
