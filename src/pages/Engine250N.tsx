@@ -38,6 +38,18 @@ const Engine250N = () => {
         </motion.p>
       </section>
 
+        {/* ENGINE IMAGE */}
+      <section className="py-20 flex justify-center px-6">
+        <motion.img
+          src="/lovable-uploads/250N.jpeg" // 👈 place in public folder
+          alt="250N Engine"
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1 }}
+          className="rounded-xl max-w-4xl w-full shadow-2xl"
+        />
+      </section>
+
      {/* TECHNICAL SPECIFICATIONS — 4kN STYLE */}
 <section className="py-24 bg-black">
   <div className="max-w-5xl mx-auto px-6">
@@ -73,17 +85,7 @@ const Engine250N = () => {
   </div>
 </section>
 
-      {/* ENGINE IMAGE */}
-      <section className="py-20 flex justify-center px-6">
-        <motion.img
-          src="/lovable-uploads/250N.jpeg" // 👈 place in public folder
-          alt="250N Engine"
-          initial={{ opacity: 0, scale: 0.9 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1 }}
-          className="rounded-xl max-w-4xl w-full shadow-2xl"
-        />
-      </section>
+    
 
       {/* DESCRIPTION */}
       <section className="py-20 max-w-4xl mx-auto px-6 text-center">
