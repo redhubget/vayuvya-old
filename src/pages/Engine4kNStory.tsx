@@ -63,7 +63,7 @@ const Engine4kNStory = () => {
       {/* IMAGE SECTION */}
       <section className="py-24 flex justify-center px-6">
         <motion.img
-          src="/lovable-uploads/jet.jpg" // 👈 your single image
+          src="/gallery/4.jpeg" // 👈 your single image
           alt="4kN Engine"
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
