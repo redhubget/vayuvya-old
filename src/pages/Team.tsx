@@ -1,200 +1,194 @@
 import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Linkedin } from "lucide-react";
 
 const Team = () => {
-  /* =====================
-     LEADERSHIP
-  ===================== */
+
   const leadership = [
     {
       name: "Dhanush D B",
-      /* role: "Co-Founder & CEO",*/
-      bio: "Aerospace engineer with expertise in propulsion systems and advanced manufacturing. Leading the vision for indigenous defence technology development.",
+      role: "Co-Founder & CEO",
       image: "/lovable-uploads/39a2fdae-d96c-404c-91b3-c9d798d32f97.png",
-      initials: "DD",
+      linkedin: "https://www.linkedin.com/in/dhanush-d-b-434485152/",
     },
     {
       name: "Raghavendra",
-      /*role: "Co-Founder & CTO",*/
-      bio: "Leads technology strategy, driving innovative and secure aerospace and defense solutions. Focused on turning advanced concepts into practical, high-performance systems.",
+      role: "Co-Founder & CTO",
       image: "/lovable-uploads/3ad36d1d-996e-499e-9477-efd313c72130.png",
-      initials: "RG",
+      linkedin: "https://www.linkedin.com/in/raghavendra-g-link/",
     },
   ];
 
-  /* =====================
-     ADVISORY BOARD
-  ===================== */
   const advisors = [
-    {
+       {
       name: "Pruthviraj",
       role: "Strategic Advisor",
-      bio: "Industry veteran with extensive experience in defence technology and strategic partnerships. Provides guidance on business development and market expansion.",
       image: "/lovable-uploads/de66633b-c246-4a31-9c0d-273536ff816b.png",
-      initials: "PV",
+      linkedin: "https://www.linkedin.com/in/dr-pruthviraj-u/",
     },
     {
       name: "Ramesh Kumar",
       role: "Technical Advisor",
-      bio: "Seasoned expert in aerospace engineering and technology development. Provides valuable insights on technical strategy and innovation.",
       image: "/lovable-uploads/e6b9e2e2-fccc-4e27-81c9-1fbb67e33d1a.png",
-      initials: "RM",
     },
     {
-      name: "Dr. Allamaprabhu C Yaravintelimath",
-      role: "Aerospace Research Advisor",
-      bio: "Aerospace educator and researcher specializing in propulsion and CFD applications. Provides expert guidance on aerospace systems and research collaborations.",
+      name: "Dr. Allamaprabhu",
+      role: "Aerospace Advisor",
       image: "/lovable-uploads/Allamaprabhu.jpeg",
-      initials: "AY",
+      linkedin: "https://www.linkedin.com/in/allamaprabhu-yaravintelimath/",
     },
     {
       name: "Nirmalya Dasgupta",
       role: "Aviation Advisor",
-      bio: "Veteran aviator and test pilot with 28 years of military experience across 32 aircraft types. Provides expert guidance on aviation safety, aircraft performance, and aerospace innovation.",
       image: "/lovable-uploads/nirmalya.jpeg",
-      initials: "ND",
+      linkedin: "https://www.linkedin.com/in/group-captain-nirmalya-dasgupta-477a621b9/",
     },
   ];
 
-  /* =====================
-     ENGINEERING TEAM (FIXED NAME)
-  ===================== */
-  const EngineeringTeam = [
+  const engineers = [
     {
       name: "Vijay Vittal",
-      role: "Embedded engineer",
-      bio: "Embedded systems engineer focusing on firmware, RTOS applications, hardware bring-up, and sensor integration for aerospace and defence platforms.",
+      role: "Embedded Engineer",
       image: "/lovable-uploads/vijay vittal.png",
-      initials: "VV",
-    },
-    {
-      name: "Irfan Ali",
-      role: "Propulsion engineer",
-      bio: "Propulsion engineer gaining hands-on experience in propulsion testing, analysis, and design support.",
-      image: "/lovable-uploads/irfan.jpeg",
-      initials: "IA",
     },
     {
       name: "Kalyan Kumar",
-      role: "Propulsion engineer",
-      bio: "Focused on hands-on learning in aerospace propulsion, contributing to testing and performance assessment.",
+      role: "Propulsion Engineer",
       image: "/lovable-uploads/kalyank.png",
-      initials: "KK",
+      linkedin: "https://www.linkedin.com/in/kalyan-kumar-bellala-08767525a/",
+    },
+    {
+      name: "Irfan Ali",
+      role: "Propulsion Engineer",
+      image: "/lovable-uploads/irfan.jpeg",
+      linkedin: "https://www.linkedin.com/in/irfan-ali-509823320/",
     },
     {
       name: "Shalini K V",
-      role: "Embedded engineer",
-      bio: "Embedded systems intern working on microcontroller-based development, sensor interfacing, and hardware-software integration for defence platforms.",
+      role: "Embedded Engineer",
       image: "/lovable-uploads/sk.jpeg",
-      initials: "SK",
+      linkedin: "https://www.linkedin.com/in/shalini-k-v/",
+    },
+    {
+      name: "Vijay Vittal",
+      role: "Embedded Engineer",
+      image: "/lovable-uploads/vijay vittal.png",
+      linkedin: "#", // add if available
     },
   ];
 
   return (
-    <div className="relative">
+    <div className="bg-black text-white">
 
-      {/* =====================
-          LEADERSHIP
-      ===================== */}
-      <section className="py-20 bg-black">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-16">Leadership</h2>
+      {/* HERO */}
+      <section className="py-32 text-center">
+        <h1 className="text-5xl md:text-6xl font-[200] mb-6">
+          Meet the Team
+        </h1>
+        <p className="text-gray-400 max-w-2xl mx-auto">
+          Engineers, builders, and visionaries driving indigenous aerospace innovation.
+        </p>
+      </section>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {leadership.map((member, idx) => (
-              <Card key={idx} className="bg-black/50 border-gray-700 hover:border-blue-400 transition">
-                <CardContent className="p-8 text-center">
-                  <Avatar className="w-32 h-32 mx-auto mb-6">
-                    <AvatarImage src={member.image} />
-                    <AvatarFallback className="bg-blue-600 text-2xl">
-                      {member.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    {member.name}
-                  </h3>
-                  <p className="text-blue-400 font-semibold mb-4">
-                    {member.role}
-                  </p>
-                  <p className="text-gray-300 leading-relaxed">
-                    {member.bio}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+      {/* LEADERSHIP */}
+      <section className="py-20">
+        <h2 className="text-3xl text-center mb-16 font-[200]">
+          Leadership
+        </h2>
+
+        <div className="flex flex-col md:flex-row justify-center gap-12 max-w-4xl mx-auto">
+          {leadership.map((person, i) => (
+            <Card key={i} className="bg-transparent border-none text-center">
+              <CardContent>
+
+                <Avatar className="w-40 h-40 mx-auto mb-6">
+                  <AvatarImage src={person.image} />
+                </Avatar>
+
+                <h3 className="text-xl font-semibold">{person.name}</h3>
+                <p className="text-gray-400 text-sm mb-3">{person.role}</p>
+
+                <a
+                  href={person.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-blue-600 transition"
+                >
+                  <Linkedin className="w-5 h-5" />
+                </a>
+
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
-      {/* =====================
-          ADVISORY BOARD
-      ===================== */}
-      <section className="py-20 bg-gray-950">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-16">Advisory Board</h2>
+      {/* ADVISORY */}
+      <section className="py-20">
+        <h2 className="text-3xl text-center mb-16 font-[200]">
+          Advisory Board
+        </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {advisors.map((advisor, idx) => (
-              <Card key={idx} className="bg-black/50 border-gray-700 hover:border-blue-400 transition">
-                <CardContent className="p-8 flex items-center gap-6">
-                  <Avatar className="w-24 h-24">
-                    <AvatarImage src={advisor.image} />
-                    <AvatarFallback className="bg-blue-600 text-xl">
-                      {advisor.initials}
-                    </AvatarFallback>
-                  </Avatar>
-                  <div className="text-left">
-                    <h3 className="text-xl font-bold text-white">
-                      {advisor.name}
-                    </h3>
-                    <p className="text-blue-400 font-semibold mb-2">
-                      {advisor.role}
-                    </p>
-                    <p className="text-gray-300 text-sm">
-                      {advisor.bio}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          {advisors.map((person, i) => (
+            <Card key={i} className="bg-transparent border-none text-center">
+              <CardContent>
+
+                <Avatar className="w-28 h-28 mx-auto mb-4">
+                  <AvatarImage src={person.image} />
+                </Avatar>
+
+                <h3 className="text-lg">{person.name}</h3>
+                <p className="text-gray-400 text-sm mb-3">{person.role}</p>
+
+                <a
+                  href={person.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-blue-600 transition"
+                >
+                  <Linkedin className="w-4 h-4" />
+                </a>
+
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
-      {/* =====================
-          ENGINEERING TEAM (FIXED)
-      ===================== */}
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold mb-16">Engineering Team</h2>
+      {/* ENGINEERING TEAM */}
+      <section className="py-20">
+        <h2 className="text-3xl text-center mb-16 font-[200]">
+          Engineering Team
+        </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {EngineeringTeam.map((member, idx) => (
-              <Card key={idx} className="bg-black/50 border-gray-700 hover:border-blue-400 transition">
-                <CardContent className="p-8 text-center">
-                  <Avatar className="w-28 h-28 mx-auto mb-6">
-                    <AvatarImage src={member.image} />
-                    <AvatarFallback className="bg-blue-600 text-xl">
-                      {member.initials}
-                    </AvatarFallback>
-                  </Avatar>
+        <div className="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+          {engineers.map((person, i) => (
+            <Card key={i} className="bg-transparent border-none text-center">
+              <CardContent>
 
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {member.name}
-                  </h3>
+                <Avatar className="w-24 h-24 mx-auto mb-4">
+                  <AvatarImage src={person.image} />
+                </Avatar>
 
-                  <p className="text-blue-400 font-semibold mb-3">
-                    {member.role}
-                  </p>
+                <h3 className="text-base">{person.name}</h3>
+                <p className="text-gray-500 text-sm mb-2">{person.role}</p>
 
-                  <p className="text-gray-300 text-sm">
-                    {member.bio}
-                  </p>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                {person.linkedin !== "#" && (
+                  <a
+                    href={person.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/10 hover:bg-blue-600 transition"
+                  >
+                    <Linkedin className="w-4 h-4" />
+                  </a>
+                )}
+
+              </CardContent>
+            </Card>
+          ))}
         </div>
       </section>
 
