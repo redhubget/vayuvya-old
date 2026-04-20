@@ -21,8 +21,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   {
   label: "Products",
   href: "/products", // 4kN STORY PAGE
-  dropdown: [
-    { label: "250N Micro Turbojet", href: "/products/250n" },
+ /* dropdown: [
+    { label: "250N Micro Turbojet", href: "/products/250n" },*/
   ],
 },
     { label: "News & Events", href: "/news-events" },
