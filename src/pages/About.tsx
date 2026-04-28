@@ -98,33 +98,31 @@ const About = () => {
 
             <div>
               <span className="block text-blue-400 tracking-widest uppercase text-sm mb-4">
-                Visionary Founder & Scientist
-              </span>
+  Foundational Research Contributor & Investor
+</span>
 
-              <h2 className="text-4xl font-semibold text-white mb-6">
-                Prashanth Raghu
-              </h2>
+<h2 className="text-4xl font-semibold text-white mb-6">
+  Prashanth Raghu
+</h2>
 
-              <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Prashanth Raghu is the core technologist and foundational
-                scientist behind Vayuvya Defence’s propulsion systems.
-              </p>
+<p className="text-lg text-gray-300 leading-relaxed mb-6">
+  Prashanth Raghu contributed to the early-stage research and foundational
+  modelling that informed the initial direction of Vayuvya Defence’s propulsion concepts.
+</p>
 
-              <p className="text-gray-300 leading-relaxed mb-6">
-                Between <span className="text-white font-medium">2013 and 2023</span>,
-                he worked extensively on the mathematical foundation and
-                first-principle models that underpin Vayuvya’s current jet engine
-                platforms. His work ensured that the propulsion architecture
-                remained fully indigenous, modular, and adaptable — enabling
-                scalable deployment across multiple thrust classes.
-              </p>
+<p className="text-gray-300 leading-relaxed mb-6">
+  Between <span className="text-white font-medium">2013 and 2023</span>, he worked on
+  first-principle mathematical approaches and system-level concepts relevant to
+  small-scale propulsion architectures. These early explorations provided
+  useful reference frameworks during the formative stages of the company’s
+  technology development.
+</p>
 
-              <p className="text-gray-300 leading-relaxed">
-                These foundational models form the backbone of Vayuvya Defence’s
-                engine ecosystem today, allowing the engineering team to evolve
-                designs rapidly while maintaining performance integrity,
-                manufacturability, and strategic independence.
-              </p>
+<p className="text-gray-300 leading-relaxed">
+  In addition to his technical contributions, he continues to support the
+  organization as an investor and advisor, contributing to its long-term
+  growth and strategic direction.
+</p>
             </div>
 
             <div className="relative">
