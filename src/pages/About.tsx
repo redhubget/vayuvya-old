@@ -138,7 +138,7 @@ const About = () => {
                     Prashanth Raghu
                   </h3>
                   <p className="text-blue-400 font-medium mt-1">
-                    Visionary Founder & Scientist
+                    Foundational Research Contributor & Investor
                   </p>
                 </div>
               </div>
