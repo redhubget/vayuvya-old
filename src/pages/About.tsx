@@ -71,16 +71,18 @@ const About = () => {
           </h2>
           <div className="text-lg text-white leading-relaxed space-y-6">
             <p>
-              Vayuvya Defence is a private defence technology company focused on
-              the indigenous development of cutting-edge solutions across
-              aerospace, software, and artificial intelligence.
+              Vayuvya Defence is an Indian aerospace and defence technology company focused on the indigenous
+              design, development, and manufacturing of advanced jet propulsion systems 
+              and unmanned aerial vehicles (UAVs).
             </p>
             <p>
-              Our company was founded with the vision of making India
-              self-reliant in critical defence technologies. We specialize in
-              designing and manufacturing high-performance micro jet engines,
-              satellite propulsion systems, autonomous aerial platforms,
-              enterprise software solutions, and responsible AI systems.
+              Driven by the vision of strengthening India's self-reliance in aerospace and defence technologies,
+              we are currently focused on developing high-performance micro turbojet engines, with a roadmap to expand into 
+              higher-thrust propulsion systems and advanced UAV platforms.
+
+              Through dedicated engineering, research, testing, and manufacturing capabilities,
+              we aim to build reliable, high-performance propulsion technologies and aerial
+              platforms to meet the evolving requirements of India's aerospace and defence sectors.
             </p>
           </div>
         </div>
