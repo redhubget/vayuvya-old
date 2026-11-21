@@ -161,9 +161,9 @@ const About = () => {
               Our Mission
             </h3>
             <p className="text-lg text-gray-300 leading-relaxed">
-              To provide reliable, innovative, and high-performance technology
-              solutions across aerospace, software, and AI that support India's
-              defence and space ecosystems.
+              To design, develop, and manufacture reliable, high-performance indigenous
+              jet propulsion systems and unmanned aerial platforms, advancing India's 
+              self-reliance in aerospace and defence technologies.
             </p>
           </div>
 
@@ -172,9 +172,9 @@ const About = () => {
               Our Vision
             </h3>
             <p className="text-lg text-gray-300 leading-relaxed">
-              To be India's leading innovator in defence technologies spanning
-              aerospace propulsion, intelligent software systems, and
-              responsible AI.
+              To establish Vayuvya Defence as a leading Indian aerospace and defence engineering
+              company, building world-class propulsion systems and UAV technologies, from micro turbojet
+              engines to larger and more advanced propulsion platforms.
             </p>
           </div>
         </div>
